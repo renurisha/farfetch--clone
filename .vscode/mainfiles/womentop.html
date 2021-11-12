@@ -784,10 +784,10 @@
     <div id="filtersort">
         <div id="filterlist">Filter</div>
         <div id="sortprice">
-            <select id="sortbyprice">
+            <select id="sortbyprice" onchange="sortbyprice()">
                 <option value="">sort by</option>
-                <option value="">low to high</option>
-                <option value="">high to low</option>
+                <option value="low">low to high</option>
+                <option value="high">high to low</option>
             </select>
         </div>
     </div>
@@ -817,7 +817,7 @@
                 </select>
             </div>
             <div>
-                <select id="filter" class="category">
+                <select id="filter" class="category" onchange="pricenumber()">
                 <option value="">price</option>
                 <option value="less"> less than 500</option>
                 <option value="greater"> greater than 500</option>

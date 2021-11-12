@@ -786,10 +786,10 @@
     <div id="filtersort">
         <div id="filterlist">Filter</div>
         <div id="sortprice">
-            <select id="sortbyprice">
+            <select id="sortbyprice" onchange="sortbyprice()">
                 <option value="">sort by</option>
-                <option value="">low to high</option>
-                <option value="">high to low</option>
+                <option value="low">low to high</option>
+                <option value="high">high to low</option>
             </select>
         </div>
     </div>
@@ -820,7 +820,7 @@
                 </select>
             </div>
             <div>
-                <select id="filter" class="category">
+                <select id="filter" class="category" onchange="pricenumber()">
                 <option value="">price</option>
                 <option value="less"> less than 500</option>
                 <option value="greater"> greater than 500</option>
@@ -1232,5 +1232,48 @@
         showproducts(data1);
 
 
+    }
+
+    function pricenumber() {
+        var pricecheck = document.getElementById("filter").value;
+        if (pricecheck == "less") {
+            var data1 = local.filter(function(item) {
+                if (item.price <= 500) {
+                    return item;
+                }
+            })
+        }
+
+        if (pricecheck == "greater") {
+            var data1 = local.filter(function(item) {
+                if (item.price >= 500) {
+                    return item;
+                }
+            })
+        }
+
+        showproducts(data1);
+    }
+
+
+    function sortbyprice() {
+        var pricecheck = document.getElementById("sortbyprice").value;
+        if (pricecheck == "low") {
+            local = local.sort(function(a, b) {
+
+                return a.price - b.price;
+
+            })
+        }
+
+        if (pricecheck == "high") {
+            local = local.sort(function(a, b) {
+
+                return b.price - a.price;
+
+            })
+        }
+
+        showproducts(local);
     }
 </script>
