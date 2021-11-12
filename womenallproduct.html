@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bottom {
+            width: 70%;
+            display: grid;
+            margin: auto;
+            grid-template-columns: 22% 22% 22% 22%;
+            gap: 10px;
+            border: 1px solid red;
+        }
+        
+        .bottom>div {
+            border: 1px solid blue;
+        }
+        
+        img {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="top">Product page of FerFetch</div>
+        <div class="bottom"></div>
+    </div>
+</body>
+
+</html>
+<script>
+    var bottom = document.querySelector(".bottom");
+    var data = JSON.parse(localStorage.getItem("farfetchdatabase"));
+    showproducts(data);
+
+    function showproducts(data) {
+        data.map(function(item) {
+            var div1 = document.createElement("div");
+            container.addEventListener("click", function() {
+                addcart(item);
+
+            });
+            var img = document.createElement("img");
+            img.src = item.img1;
+            var brand = document.createElement("p");
+            brand.textContent = item.brand;
+            var name = document.createElement("p");
+            name.textContent = item.name;
+            var price = document.createElement("p");
+            price.textContent = item.price;
+            var gender = document.createElement("p");
+            gender.textContent = item.gender;
+            div1.append(img, brand, name, price, gender);
+            bottom.append(div1);
+
+
+
+        });
+    }
+
+    function addcart(item) {
+        var cartdata = [];
+        cartdata.push(item);
+        localStorage.setItem("cartdatabase", JSON.stringify(cartdata));
+        window.location.href = "farfetchcart.html";
+
+        //console.log(cartdata);
+
+    }
+</script>

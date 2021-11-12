@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/f3afea15cd.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0px;
+        }
+        
+        .main {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .nav {
+            width: 100%;
+            height: 50px;
+            background-color: gray;
+        }
+        
+        #first {
+            width: 100%;
+            height: 20px;
+            margin-bottom: 15px;
+            display: flex;
+        }
+        
+        #first>div {
+            padding: 20px;
+            padding-bottom: 0px;
+        }
+        
+        .second {
+            width: 100%;
+            height: 40px;
+            display: flex;
+            margin-left: 35px;
+        }
+        
+        .second>div {
+            padding-right: 20px;
+            padding-top: 20px;
+            width: 70px;
+        }
+        
+        .second>div {
+            padding-bottom: 0px;
+        }
+        
+        .second {
+            display: flex;
+        }
+        
+        th,
+        td {
+            width: 200px;
+            height: 30px;
+        }
+        
+        .clothingdiv>div:nth-child(1),
+        .shoesdiv>div:nth-child(1),
+        .bagsdiv>div:nth-child(1) {
+            margin-right: 20px;
+        }
+        
+        #imgdiv {
+            width: 300px;
+            height: 300px;
+        }
+        
+        img {
+            width: 100%;
+            height: 50%;
+        }
+        
+        .bagsdiv,
+        .accessoriesdiv,
+        .jewelarydiv,
+        .clothingdiv,
+        .shoesdiv,
+        .giftsdiv,
+        .newindiv,
+        .designerdiv {
+            display: none;
+            display: flex;
+            background-color: white;
+            padding: 15px;
+            display: flex;
+            border: 2px solid;
+        }
+        
+        .bagsdiv,
+        .accessoriesdiv,
+        .jewelarydiv,
+        .clothingdiv,
+        .shoesdiv,
+        .giftsdiv,
+        .newindiv,
+        .designerdiv {
+            display: none;
+        }
+        
+        ul {
+            display: flex;
+            list-style: none;
+            position: absolute;
+        }
+        
+        ul>li {
+            margin-right: 10px;
+            position: absolute;
+        }
+        
+        div {
+            list-style: none;
+        }
+        
+        div>li {
+            position: absolute;
+        }
+        
+        .icons>ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+        
+        #second {
+            text-align: center;
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #bodycontent {
+            width: 100%;
+            display: flex;
+            margin-top: 10px;
+        }
+        
+        .left {
+            width: 25%;
+            margin-right: 20px;
+        }
+        
+        .right {
+            width: 74%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .right>div {
+            width: 300px;
+            height: 330px;
+            margin: 10px;
+        }
+        
+        img {
+            width: 100%;
+        }
+        
+        #heading {
+            text-align: center;
+        }
+        
+        .category {
+            width: 180px;
+            height: 40px;
+            background-color: white;
+            border: none;
+            font-size: 18px;
+        }
+        
+        #second {
+            margin-top: 30px;
+        }
+        
+        #first {
+            display: flex;
+            width: 100%;
+            height: 40px;
+        }
+        
+        .threegender {
+            width: 250px;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .headingtext {
+            width: 250px;
+            height: 100%;
+            text-align: center;
+            font-size: 35px;
+            justify-content: center;
+            margin-left: 300px;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .icons {
+            width: 200px;
+            justify-content: space-around;
+            margin-left: 300px;
+            height: 100%;
+            display: flex;
+            vertical-align: top;
+        }
+        
+        input[type="text"] {
+            width: 250px;
+            height: 40px;
+            border: black;
+            padding: 0px 10px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 7px;
+            margin-left: 200px;
+        }
+        
+        #pagename {
+            text-align: center;
+            font-weight: bolder;
+            font-size: 28px;
+            width: 100%;
+            height: 30px;
+            margin-top: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #filtersort {
+            display: flex;
+            height: 30px;
+            width: 100%;
+            justify-content: start;
+            margin-top: 40px;
+        }
+        
+        #filterlist {
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+        }
+        
+        #sortprice {
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 1200px;
+        }
+        
+        #star {
+            width: 30px;
+            height: 30px;
+            margin-left: 85%;
+            border: 1px solid red;
+        }
+        
+        #sortbyprice {
+            width: 170px;
+            height: 100%;
+            font-size: 20px;
+            background-color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav"></div>
+
+        <div id="first">
+            <div class="threegender">
+
+                <div id="women"><b>women</b></div>
+                <div id="man">men</div>
+                <div>kids</div>
+            </div>
+            <div class="headingtext">FARFETCH</div>
+            <div class="icons">
+                <div><i class="far fa-circle"></i></div>
+
+
+                <div><i class="far fa-user"></i></div>
+                <div><i class="far fa-star"></i></div>
+                <div><i class="fas fa-shopping-bag"></i></div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="second">
+        <div id="gifts">Gifts
+            <li>
+
+                <div class="giftsdiv">
+                    <div>
+                        <table id="tbl">
+                            <tr>
+
+                                <th>SHOP FOR</th>
+
+
+                                <th>SHOP BY</th>
+
+
+                                <th>SHOP DESIGNER</th>
+
+
+
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="womenclassiccurator.html">The classic curator</a></td>
+                                <td><a href="gift.html">Gifts that do good</td>
+                                <td><a href="womenalexander.html">Alexander</a></td>
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="artful.html">The artful expressionist</td>
+                                <td><a href="homeware.html">Homeware to love</a></td>
+                                <td><a href="womenbalenciaga.html">Balenciage</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="glamour.html">The glamour icon</a></td>
+                                <td><a href="logoaccessories.html">Logo Accessories</a></td>
+                                <td><a href="womengucci.html">Gucci</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="streetwear.html">the streetwear expert</a></td>
+                                <td><a href="womenmatching.html">Matching sets</a></td>
+                                <td><a href="womenvalentino.html">Valentino</a></td>
+
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td><a href="womenprada.html">prada</a></td>
+
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div id="imgdiv">
+                        <img src="https://cdn-static.farfetch-contents.com/content/images/Home_CMS/Cms/03-11-WW-GIFTING-CLASSIC-CURATOR.jpg">
+                    </div>
+                </div>
+            </li>
+
+
+        </div>
+        <div id="newin">New in
+
+            <li>
+                <div class="newindiv">
+                    <div>
+                        <table id="tbl">
+                            <tr>
+                                <th>WHAT'S NEW</th>
+                                <th>TRENDING NOW</th>
+                                <th>DISCOVER</th>
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="newtoday.html">New in Today</a></td>
+                                <td><a href="outout.html">The out-out bag</a></td>
+                                <td><a href="populardemand.html">Back by popular Demand</td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="preorder.html">Pre-order</a></td>
+                                <td><a href="womenpartywear.html">The partywear Edit</a></td>
+
+
+                            </tr>
+
+
+                        </table>
+                    </div>
+                    <div id="imgdiv">
+                        <img src="https://cdn-static.farfetch-contents.com/content/images/Home_CMS/Cms/03-11-WW-NEW_IN-SHEARLING.jpg">
+                    </div>
+                </div>
+            </li>
+        </div>
+        <div id="designer">Designer
+
+
+            <li>
+
+                <div class="designerdiv">
+                    <div>
+                        <table id="tbl">
+                            <tr>
+
+                                <th>Featured Designers</th>
+
+
+
+
+
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="womenalexander.html">Alexander</a></td>
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="womenbalenciaga.html">Blenciaga</a></td>
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="womengucci.html">Gucci</a></td>
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="womenprada.html">Prada</td>
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="womenvalentino.html">Valentino</a></td>
+
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div id="imgdiv">
+                        <img src="https://cdn-static.farfetch-contents.com/content/images/Home_CMS/Cms/27-10-WW-DESIGNERS-BURBERRY.jpg">
+                    </div>
+                </div>
+            </li>
+
+        </div>
+        <div id="clothing">clothing
+
+            <li>
+                <div class="clothingdiv">
+                    <div>
+                        <table id="tbl">
+                            <tr>
+                                <th>clothing</th>
+                                <th>Activewear</th>
+                                <th>Discover</th>
+                                <th>Donate & Repair</th>
+
+                            </tr>
+                            <tr>
+                                <td id="clothingclothing"><a href="womencloth.html">All clothing</a></td>
+                                <td><a href="womenactivewear.html">All Activewear</a></td>
+                                <td><a href="womenbridal.html">Bridal</a></td>
+                                <td>Donate pre-loved</td>
+                                <td id="col" rowspan="5"></td>
+                            </tr>
+                            <tr>
+                                <td><a href="womencoat.html">coats</a></td>
+                                <td><a href="womenallinone.html">all in one</a></td>
+                                <td><a href="womenpartywear.html">partywear</a></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><a href="womenjacket.html">Jacket</a></td>
+                                <td><a href="womenfootwear.html">footwear</a></td>
+                                <td><a href="womenmatching.html">matching sets</a></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><a href="womenskirt.html">skirts</a></td>
+                                <td><a href="womenjacket.html">jacket</a></td>
+                                <td></td>
+
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><a href="womensuit.html">suits</a></td>
+                                <td><a href="womengym.html">gym bag</a></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><a href="womentop.html">top</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="imgdiv">
+                        <img src="https://cdn-static.farfetch-contents.com/content/images/Home_CMS/Cms/10/03-11-WW-CLOTHING-VESTS.jpg">
+                    </div>
+                </div>
+            </li>
+
+
+        </div>
+        <div id="shoes">Shoes
+
+
+            <li>
+                <div class="shoesdiv">
+                    <div>
+                        <table id="tbl">
+                            <tr>
+
+                                <th>Shoes</th>
+
+
+                                <th>Featured Designer</th>
+
+
+                                <th>Donate & Repair</th>
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="womenshoes.html">All Shoes</a></td>
+                                <td><a href="womenalexander.html">Alexander</a></td>
+                                <td>Donate Pre-lover Pieces</td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="womenboot.html">Boots</a></td>
+                                <td><a href="womengucci.html">Gucci</a></td>
+                                <td><a href="womenrepair.html">repair & Revive</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="womenslide.html">Slide & Flip Flops</a></td>
+                                <td><a href="womenprada.html">Prada</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="womenpump.html">Pumps</a></td>
+                                <td><a href="">Valentino</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="womensandle.html">sandles</a></td>
+                                <td><a href="womenbaleciaga.html">Balenciaga</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="womensneaker.html">sneakers</a></td>
+
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="imgdiv">
+                        <img src="https://cdn-static.farfetch-contents.com/content/images/Home_CMS/Cms/03-11-WW-SHOES-BOOTS.jpg">
+                    </div>
+                </div>
+            </li>
+
+        </div>
+        <div id="bags">Bags
+            <li>
+
+                <div class="bagsdiv">
+                    <div>
+                        <table id="tbl">
+                            <tr>
+
+                                <th>Bags</th>
+
+
+                                <th>Featured Designer</th>
+
+
+                                <th>Iconic Collections</th>
+
+
+                                <th>Donate & Repair</th>
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="womenbag.html">All Bags</a></td>
+                                <td><a href="womenbaleciaga.html">Balenciage</a></td>
+                                <td><a href="womeniconic.html">All iconic collections</a></td>
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="womenbackpack.html">Backpacks</a></td>
+                                <td><a href="womenburberry.html">Burberry</a></td>
+                                <td><a href="womenpradanylon.html">Prada Nylon</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="womenbeltbag.html">Belt bags</a></td>
+                                <td><a href="womengucci.html">Gucci</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="womenclutchbag.html">Clutch Bags</a></td>
+                                <td><a href="womenprada.html">Prada</a></td>
+
+                            </tr>
+
+                            <tr>
+                                <td><a href="womenluggage.html">Luggage</a></td>
+                                <td><a href="womenvalentino.html">Valentino</a></td>
+
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="imgdiv">
+                        <img src="https://cdn-static.farfetch-contents.com/content/images/Home_CMS/Cms/03-11-WW-BAGS-CLUTCH.jpg">
+                    </div>
+                </div>
+            </li>
+        </div>
+        <div id="accessories">Accessories
+
+            <li>
+
+                <div class="accessoriesdiv">
+                    <div>
+                        <table id="tbl">
+                            <tr>
+
+                                <th>Accessories</th>
+
+
+                                <th>Homeware</th>
+
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="womenaccessories.html">All Accessories</a></td>
+                                <td><a href="womenhomeware.html">All Homeware</a></td>
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="belt.html">Belts</td>
+                                <td><a href="candle.html">candles & Homefragrance</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="glasses.html">Glasses</a></td>
+                                <td><a href="furniture.html">Furniture</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="gloves.html">Gloves</a></td>
+                                <td><a href="tableware.html">Tableware</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="hat.html">Hats</a></td>
+
+
+                            </tr>
+
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="imgdiv">
+                        <img src="https://cdn-static.farfetch-contents.com/content/images/Home_CMS/Cms/03-11-WW-ACCESSORIES-WINTER_ACCESSORIES.jpg">
+                    </div>
+                </div>
+            </li>
+
+        </div>
+        <div id="jewelary">Jewelary
+
+            <li>
+
+                <div class="jewelarydiv">
+                    <div>
+                        <table id="tbl">
+                            <tr>
+
+                                <th>Fashion Jewellary</th>
+
+
+                                <th>Fine Jewelary</th>
+
+
+                                <th>Designer</th>
+
+
+
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="womenjewelary.html">All Fashion Jewelary</a></td>
+                                <td><a href="womenfinejewelary.html">All fine jewelary</a></td>
+                                <td><a href="womenrolexjewelary.html">Rolex</td>
+                               
+
+                            </tr>
+                            <tr>
+                                <td><a href="womenbracelet.html">Bracelets</td>
+                                <td><a href="womenfinebracelet.html">Fine bracelets</a></td>
+                                <td><a href="womenchopard.html">Chopard</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="womenearring.html">Earrings</a></td>
+                                <td><a href="womenfineearring.html">Fine Earrings</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="womennecklace.html">Necklaces</a></td>
+                                <td><a href="womenfinenecklace.html">Fine Necklace</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="womenring.html">Rings</a></td>
+                                <td><a href="womenfinering.html">Fine Rings</a></td>
+
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div id="imgdiv">
+                        <img src="https://cdn-static.farfetch-contents.com/content/images/Home_CMS/Cms/03-11-WW-JEWELRY-PERSONALISED.jpg">
+                    </div>
+                </div>
+            </li>
+
+        </div>
+        <div id="preowned"><a href="womenpreowned.html">Pre-owned</a></div>
+        <div id="sale"><a href="womensale.html">sale</a></div>
+        <div id="searchbar"><input type="text" placeholder="search"></div>
+
+    </div>
+
+    <div id="pagename">DESIGNER WOMEN CLOTHS</div>
+
+
+
+
+
+
+
+
+
+
+
+    <div id="filtersort">
+        <div id="filterlist">Filter</div>
+        <div id="sortprice">
+            <select id="sortbyprice">
+                <option value="">sort by</option>
+                <option value="">low to high</option>
+                <option value="">high to low</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="bodycontent">
+
+        <div class="left">
+            <div style="margin-bottom: 14px;">
+                <select id="categorywomen" class="category" onchange="categoryfun()">
+                    <option value="">Category</option>
+                    <option value="jacket">jacket</option>
+                    <option value="skirt">skirt</option>
+                    <option value="suit">suit</option>
+                    <option value="top">top</option>
+                    <option value="saree">saree</option>
+                </select>
+            </div>
+
+
+            <div>
+                <select id="featurewomen" class="category" onchange="featurefun()">
+                        <option value="">Designer</option>
+                        <option value="Alexander">Alexander </option>
+                        <option value="Balmain">Balmain</option>
+                        <option value="Prada">Prada</option>
+                        <option value="Valentino">Valentino</option>
+                       
+                    </select>
+            </div>
+            <div>
+                <select id="filter" class="category">
+                <option value="">price</option>
+                <option value="less"> less than 500</option>
+                <option value="greater"> greater than 500</option>
+               
+               
+               
+            </select>
+
+            </div>
+        </div>
+        <div class="right"></div>
+    </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var rightdiv = document.querySelector(".right");
+    var local = JSON.parse(localStorage.getItem("farfetchdatabase"));
+    var women = document.getElementById("women");
+    // var showdiv = document.getElementById("showdiv");
+    // showdiv.innerHTML = "";
+    // showdiv.style.visibility = "visible";
+    women.addEventListener("click", womenlistcall);
+    var clothing = document.getElementById("clothing");
+    clothing.addEventListener("mouseenter", clothinglistcall);
+    var clothing = document.getElementById("clothing");
+    clothing.addEventListener("mouseleave", clothinglistcallleave);
+    var shoes = document.getElementById("shoes");
+    shoes.addEventListener("mouseenter", shoeslistcall);
+
+    shoes.addEventListener("mouseleave", shoeslistcallleave);
+
+    var clothingclothing = document.getElementById("clothingclothing");
+    clothingclothing.addEventListener("click", clothingshow);
+    var bags = document.getElementById("bags");
+
+    bags.addEventListener("mouseenter", bagslistcall);
+
+    bags.addEventListener("mouseleave", bagslistcallleave);
+    var accessories = document.getElementById("accessories");
+
+    accessories.addEventListener("mouseenter", accessorieslistcall);
+
+    accessories.addEventListener("mouseleave", accessorieslistcallleave);
+    var jewelary = document.getElementById("jewelary");
+    jewelary.addEventListener("mouseenter", jewelarylistcall);
+
+    jewelary.addEventListener("mouseleave", jewelarylistcallleave);
+    var gifts = document.getElementById("gifts");
+    gifts.addEventListener("mouseenter", giftslistcall);
+
+    gifts.addEventListener("mouseleave", giftslistcallleave);
+
+    var newin = document.getElementById("newin");
+    newin.addEventListener("mouseenter", newinlistcall);
+
+    newin.addEventListener("mouseleave", newinlistcallleave);
+
+    var designer = document.getElementById("designer");
+    designer.addEventListener("mouseenter", designerlistcall);
+
+    designer.addEventListener("mouseleave", designerlistcallleave);
+
+
+
+
+
+    var filterlist = document.getElementById("filterlist");
+    filterlist.addEventListener("click", filterlistfun);
+    //.............................filterlist....................................................
+    var c = 1;
+
+    function filterlistfun() {
+        if (c !== 2) {
+            document.querySelector(".left").style.display = "block";
+            c++;
+        } else if (c == 2) {
+            c = 1;
+            document.querySelector(".left").style.display = "none";
+            document.querySelector(".right").style.width = "100%";
+        }
+
+    }
+
+
+
+    function clothingshow() {
+        window.location.href = "womencloth.html";
+    }
+
+    function womenlistcall() {
+        var second = document.querySelector(".second");
+        second.style.display = "flex";
+    }
+
+    function clothinglistcall() {
+
+        var third = document.querySelector(".clothingdiv");
+
+        third.style.display = "flex";
+    }
+
+    function clothinglistcallleave() {
+        var third = document.querySelector(".clothingdiv");
+        third.style.display = "none";
+
+
+
+
+
+
+
+    }
+
+    function shoeslistcall() {
+        //var showdiv = document.querySelector(".clothingdiv");
+        //document.querySelector(".clothingdiv").innerText = "";
+
+
+        var third = document.querySelector(".shoesdiv");
+
+        third.style.display = "flex";
+
+
+    }
+
+    function shoeslistcallleave() {
+        var third = document.querySelector(".shoesdiv");
+        third.style.display = "none";
+
+
+    }
+
+    function bagslistcall() {
+        //var showdiv = document.querySelector(".clothingdiv");
+        //document.querySelector(".clothingdiv").innerText = "";
+
+
+        var third = document.querySelector(".bagsdiv");
+
+        third.style.display = "flex";
+
+
+    }
+
+    function bagslistcallleave() {
+        var third = document.querySelector(".bagsdiv");
+        third.style.display = "none";
+
+
+    }
+
+    function accessorieslistcall() {
+        //var showdiv = document.querySelector(".clothingdiv");
+        //document.querySelector(".clothingdiv").innerText = "";
+
+
+        var third = document.querySelector(".accessoriesdiv");
+
+        third.style.display = "flex";
+
+
+    }
+
+    function accessorieslistcallleave() {
+        var third = document.querySelector(".accessoriesdiv");
+        third.style.display = "none";
+
+
+    }
+
+    function jewelarylistcall() {
+
+
+        //localStorage.setItem("cartdatabase", JSON.stringify([]));
+        //var cartdata = JSON.parse(localStorage.getItem("cartdatabase"));
+
+        var third = document.querySelector(".jewelarydiv");
+
+        third.style.display = "flex";
+
+
+    }
+
+    function jewelarylistcallleave() {
+        var third = document.querySelector(".jewelarydiv");
+        third.style.display = "none";
+
+
+    }
+    //..........gifts.................
+    function giftslistcall() {
+
+
+        //localStorage.setItem("cartdatabase", JSON.stringify([]));
+        //var cartdata = JSON.parse(localStorage.getItem("cartdatabase"));
+
+        var third = document.querySelector(".giftsdiv");
+
+        third.style.display = "flex";
+
+
+    }
+
+    function giftslistcallleave() {
+        var third = document.querySelector(".giftsdiv");
+        third.style.display = "none";
+
+
+    }
+
+
+
+
+
+    //.............giftend.....................
+
+    function newinlistcall() {
+
+
+        //localStorage.setItem("cartdatabase", JSON.stringify([]));
+        //var cartdata = JSON.parse(localStorage.getItem("cartdatabase"));
+
+        var third = document.querySelector(".newindiv");
+
+        third.style.display = "flex";
+
+
+    }
+
+    function newinlistcallleave() {
+        var third = document.querySelector(".newindiv");
+        third.style.display = "none";
+
+
+    }
+
+    function designerlistcall() {
+
+
+        //localStorage.setItem("cartdatabase", JSON.stringify([]));
+        //var cartdata = JSON.parse(localStorage.getItem("cartdatabase"));
+
+        var third = document.querySelector(".designerdiv");
+
+        third.style.display = "flex";
+
+
+    }
+
+    function designerlistcallleave() {
+        var third = document.querySelector(".designerdiv");
+        third.style.display = "none";
+
+
+    }
+
+
+
+
+    showproducts(local);
+
+    function showproducts(product) {
+        document.querySelector(".right").innerHTML = "";
+        product.map(function(item) {
+            //cartdata = [];
+
+            if (item.gender == "female" && item.brand == "Prada") {
+                var container = document.createElement("div");
+                container.addEventListener("click", function() {
+                    addcart(item);
+
+                });
+                var img = document.createElement("img");
+                img.src = item.img1;
+
+                var star = document.createElement("div");
+                star.setAttribute("id", "star");
+
+
+
+                // var atag = document.createElement("a");
+                // atag.setAttribute("href", "farfetchcart.html");
+                // atag.textContent = "add to bag";
+                var brand = document.createElement("p");
+                brand.textContent = item.brand;
+                var name = document.createElement("p");
+                name.textContent = item.name;
+                var price = document.createElement("p");
+                price.textContent = item.price;
+                container.append(star, img, brand, name, price);
+                rightdiv.append(container);
+
+            }
+        })
+    }
+
+
+    function addcart(item) {
+        var cartdata = [];
+        cartdata.push(item);
+        localStorage.setItem("cartdatabase", JSON.stringify(cartdata));
+        window.location.href = "farfetchcart.html";
+
+        //console.log(cartdata);
+
+    }
+
+    function categoryfun() {
+        var cat = document.getElementById("categorywomen").value;
+
+        if (cat == "jacket") {
+            var data1 = local.filter(function(item) {
+                if (item.category == "jacket" && item.gender == "female") {
+                    return item;
+                }
+                // console.log(item.gender);
+
+            })
+        }
+        if (cat == "skirt") {
+            var data1 = local.filter(function(item) {
+                if (item.category == "skirt" && item.gender == "female") {
+                    return item;
+                }
+                // console.log(item.gender);
+
+            })
+        }
+        if (cat == "suit") {
+            var data1 = local.filter(function(item) {
+                if (item.category == "suit" && item.gender == "female") {
+                    return item;
+                }
+                // console.log(item.gender);
+
+            })
+        }
+
+        if (cat == "top") {
+            var data1 = local.filter(function(item) {
+                if (item.category == "top" && item.gender == "female") {
+                    return item;
+                }
+                // console.log(item.gender);
+
+            })
+        }
+        if (cat == "saree") {
+            var data1 = local.filter(function(item) {
+                if (item.category == "saree" && item.gender == "female") {
+                    return item;
+                }
+                // console.log(item.gender);
+
+            })
+        }
+
+
+
+
+        showproducts(data1);
+
+
+
+    }
+
+    // console.log(local[1].gender);
+
+    function featurefun() {
+        var cat = document.getElementById("featurewomen").value;
+
+        if (cat == "Alexander") {
+            var data1 = local.filter(function(item) {
+                if (item.brand == "Alexander" && item.gender == "female") {
+                    console.log(item);
+                    return item;
+                }
+
+
+            })
+        }
+        if (cat == "Balmain") {
+            var data1 = local.filter(function(item) {
+                if (item.brand == "Balmain" && item.gender == "female") {
+                    return item;
+                }
+                // console.log(item.gender);
+
+            })
+        }
+        if (cat == "Prada") {
+            var data1 = local.filter(function(item) {
+                if (item.brand == "Prada" && item.gender == "female") {
+                    return item;
+                }
+                // console.log(item.gender);
+
+            })
+        }
+
+        if (cat == "Valentino") {
+            var data1 = local.filter(function(item) {
+                if (item.brand == "Valentino" && item.gender == "female") {
+                    return item;
+                }
+                // console.log(item.gender);
+
+            })
+        }
+
+
+
+
+        showproducts(data1);
+
+
+
+    }
+</script>

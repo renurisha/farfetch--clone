@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/f3afea15cd.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0px;
+        }
+        
+        .main {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .nav {
+            width: 100%;
+            height: 50px;
+            background-color: gray;
+        }
+        
+        #first {
+            width: 100%;
+            height: 20px;
+            margin-bottom: 15px;
+            display: flex;
+        }
+        
+        #first>div {
+            padding: 20px;
+            padding-bottom: 0px;
+        }
+        
+        .second {
+            width: 100%;
+            height: 40px;
+            display: flex;
+            margin-left: 35px;
+        }
+        
+        .second>div {
+            padding-right: 20px;
+            padding-top: 20px;
+            width: 70px;
+        }
+        
+        .second>div {
+            padding-bottom: 0px;
+        }
+        
+        .second {
+            display: flex;
+        }
+        
+        th,
+        td {
+            width: 200px;
+            height: 30px;
+        }
+        
+        .clothingdiv>div:nth-child(1),
+        .shoesdiv>div:nth-child(1),
+        .bagsdiv>div:nth-child(1) {
+            margin-right: 20px;
+        }
+        
+        #imgdiv {
+            width: 300px;
+            height: 300px;
+        }
+        
+        img {
+            width: 100%;
+            height: 50%;
+        }
+        
+        .bagsdiv,
+        .accessoriesdiv,
+        .watchdiv,
+        .clothingdiv,
+        .shoesdiv,
+        .giftsdiv,
+        .newindiv,
+        .designerdiv {
+            display: none;
+            display: flex;
+            background-color: white;
+            padding: 15px;
+            display: flex;
+            border: 2px solid;
+        }
+        
+        .bagsdiv,
+        .watchdiv,
+        .accessoriesdiv,
+        .jewelarydiv,
+        .clothingdiv,
+        .shoesdiv,
+        .giftsdiv,
+        .newindiv,
+        .designerdiv {
+            display: none;
+        }
+        
+        ul {
+            display: flex;
+            list-style: none;
+            position: absolute;
+        }
+        
+        ul>li {
+            margin-right: 10px;
+            position: absolute;
+        }
+        
+        div {
+            list-style: none;
+        }
+        
+        div>li {
+            position: absolute;
+        }
+        
+        .icons>ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+        
+        #second {
+            text-align: center;
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #bodycontent {
+            width: 100%;
+            display: flex;
+            margin-top: 10px;
+        }
+        
+        .left {
+            width: 25%;
+            margin-right: 20px;
+        }
+        
+        .right {
+            width: 74%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .right>div {
+            width: 300px;
+            height: 330px;
+            margin: 10px;
+        }
+        
+        img {
+            width: 100%;
+        }
+        
+        #heading {
+            text-align: center;
+        }
+        
+        .category {
+            width: 180px;
+            height: 40px;
+            background-color: white;
+            border: none;
+            font-size: 18px;
+        }
+        
+        #second {
+            margin-top: 30px;
+        }
+        
+        #first {
+            display: flex;
+            width: 100%;
+            height: 40px;
+        }
+        
+        .threegender {
+            width: 250px;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .headingtext {
+            width: 250px;
+            height: 100%;
+            text-align: center;
+            font-size: 35px;
+            justify-content: center;
+            margin-left: 300px;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .icons {
+            width: 200px;
+            justify-content: space-around;
+            margin-left: 300px;
+            height: 100%;
+            display: flex;
+            vertical-align: top;
+        }
+        
+        input[type="text"] {
+            width: 250px;
+            height: 40px;
+            border: black;
+            padding: 0px 10px;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 7px;
+            margin-left: 200px;
+        }
+        
+        #pagename {
+            text-align: center;
+            font-weight: bolder;
+            font-size: 28px;
+            width: 100%;
+            height: 30px;
+            margin-top: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #filtersort {
+            display: flex;
+            height: 30px;
+            width: 100%;
+            justify-content: start;
+            margin-top: 40px;
+        }
+        
+        #filterlist {
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+        }
+        
+        #sortprice {
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 1200px;
+        }
+        
+        #star {
+            width: 30px;
+            height: 30px;
+            margin-left: 85%;
+        }
+        
+        #sortbyprice {
+            width: 170px;
+            height: 100%;
+            font-size: 20px;
+            background-color: white;
+            border: none;
+        }
+        
+        #footer {
+            width: 100%;
+            margin-top: 20px;
+            background-color: black;
+            color: white;
+            height: 400px;
+            display: flex;
+            justify-content: space-around;
+            padding-top: 15px;
+        }
+        
+        #footerone,
+        #footertwo,
+        #footerthree,
+        #footerfour {
+            height: 80%;
+        }
+        
+        #footerone {
+            width: 450px;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        #searchbar {
+            margin-left: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav"></div>
+
+        <div id="first">
+            <div class="threegender">
+
+                <div id="women"><a href="womenhome.html">women</a></div>
+                <div id="man"><a href="manhome.html">men</a></div>
+                <div><b>kids</b></div>
+            </div>
+            <div class="headingtext">FARFETCH</div>
+            <div class="icons">
+                <div><i class="far fa-circle"></i></div>
+
+
+                <div><i class="far fa-user"></i></div>
+                <div><i class="far fa-star"></i></div>
+                <div><i class="fas fa-shopping-bag"></i></div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="second">
+
+
+        <div id="designer">Designer
+
+
+            <li>
+
+                <div class="designerdiv">
+                    <div>
+                        <table id="tbl">
+                            <tr>
+
+                                <th>Featured Designers</th>
+
+
+
+
+
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="kidalexander.html">Alexander</a></td>
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="kidvalentino.html">Valentino</a></td>
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="kidbalmain.html">Balmain</a></td>
+
+
+                            </tr>
+
+
+
+                        </table>
+                    </div>
+                    <div id="imgdiv">
+                        <img src="https://cdn-static.farfetch-contents.com/content/images/Home_CMS/Cms/27-10-MW-DESIGNERS-BURBERRY.jpg">
+                    </div>
+                </div>
+            </li>
+
+        </div>
+        <div id="clothing">Baby
+
+            <li>
+                <div class="clothingdiv">
+                    <div>
+                        <table id="tbl">
+                            <tr>
+                                <th>Baby Girls</th>
+                                <th>Baby Boys</th>
+                                <th>Nursery</th>
+
+                            </tr>
+                            <tr>
+
+
+                                <td id="clothingclothing"><a href="girlcloth.html">All Clothing</a></td>
+                                <td><a href="boycloth.html">All Clothing</a></td>
+                                <td><a href="kidnursery.html">All Nursery</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="girlbabywear.html">BabyWear</a></td>
+                                <td><a href="boybabywear.html">Babywear</a></td>
+                                <td><a href="blanket.html">Blankets</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="girlcoat.html">coats</a></td>
+                                <td><a href="boycoat.html">coats</a></td>
+                                <td><a href="bottle.html">Bottles</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="girljacket.html">Jackets</a></td>
+                                <td><a href="boyjacket.html">jacket</a></td>
+                                <td><a href="toy.html">Toys</a></td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <td><a href="girlshorts.html">shorts</a></td>
+                                </td>
+                                <td><a href="boypyjama.html">Pajamas</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="girltop.html">top</a></td>
+
+                                <td></td>
+
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="imgdiv">
+                        <img src="https://cdn-static.farfetch-contents.com/content/images/Home_CMS/Cms/03-11-KW-BABY-GIFTING.jpg">
+                    </div>
+                </div>
+            </li>
+
+
+        </div>
+        <div id="shoes">Shoes
+
+
+            <li>
+                <div class="shoesdiv">
+                    <div>
+                        <table id="tbl">
+                            <tr>
+
+                                <th>Shoes</th>
+
+
+                                <th>Featured Designer</th>
+
+
+
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="kidshoes.html">All Shoes</a></td>
+                                <td><a href="kidalexander.html">Alexander</a></td>
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="kidboot.html">Boots</a></td>
+                                <td><a href="kidvalentino.html">Valentino</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="kidslide.html">Slide & Flip Flops</a></td>
+                                <td><a href="kidbalmain.html">Balmain</a></td>
+
+                            </tr>
+
+                            <tr>
+                                <td><a href="kidsandle.html">sandles</a></td>
+
+
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div id="imgdiv">
+                        <img src="https://cdn-static.farfetch-contents.com/content/images/Home_CMS/Cms/03-11-MW-SHOES-BOOTS.jpg">
+                    </div>
+                </div>
+            </li>
+
+        </div>
+        <div id="bags">Bags
+            <li>
+
+                <div class="bagsdiv">
+                    <div>
+                        <table id="tbl">
+                            <tr>
+
+                                <th>Bags</th>
+
+
+                                <th>Featured Designer</th>
+
+
+
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="kidbag.html">All Bags</a></td>
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="kidbackpack.html">Backpacks</a></td>
+
+
+                            </tr>
+                            <tr>
+                                <td><a href="kidbelt.html">Belt bags</a></td>
+                                <td><a href="kidalexander.html">Alexander</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="kidclutch.html">Cluth Bags</a></td>
+                                <td><a href="kidvalentino.html">Valentino</a></td>
+
+                            </tr>
+                            <tr>
+                                <td><a href="kidsandle.html">sandles</a></td>
+                                <td><a href="kidbalmain.html">Balmain</a></td>
+
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div id="imgdiv">
+                        <img src="https://cdn-static.farfetch-contents.com/content/images/Home_CMS/Cms/03-11-MW-BAGS-BACKPACKS.jpg">
+                    </div>
+                </div>
+            </li>
+        </div>
+
+
+
+
+        <div id="searchbar"><input type="text" placeholder="search"></div>
+
+    </div>
+
+    <div id="pagename">DESIGNER BOY COAT</div>
+
+
+
+
+
+
+    <div id="filtersort">
+        <div id="filterlist">Filter</div>
+        <div id="sortprice">
+            <select id="sortbyprice" onchange="sortbyprice()">
+                <option value="">sort by</option>
+                <option value="low">low to high</option>
+                <option value="high">high to low</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="bodycontent">
+
+        <div class="left">
+
+
+
+            <div>
+                <select id="featurewomen" class="category" onchange="featurefun()">
+                        <option value="">Designer</option>
+                        <option value="Alexander">Alexander </option>
+                        <option value="Balmain">Balmain</option>
+                       
+                        <option value="Valentino">Valentino</option>
+                       
+                    </select>
+            </div>
+            <div>
+                <select id="filter" class="category" onchange="pricenumber()">
+                <option value="">price</option>
+                <option value="less"> less than 500</option>
+                <option value="greater"> greater than 500</option>
+               
+               
+               
+            </select>
+
+            </div>
+        </div>
+        <div class="right"></div>
+    </div>
+    </div>
+
+    <div id="footer">
+        <div id="footerone">
+            <p>FARFETCH APP</p>
+            <p>Farfetch App for iOS and Android</p>
+        </div>
+        <div id="footertwo">
+            <p>DESTINATION/REGION, CURRENCY AND LANGUAGE</p>
+            <p style="margin-bottom: 50px;">India, USD $</p>
+
+            <p>FOLLOW US</p>
+            <div id="insta">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+        <div id="footerthree">
+            <p>CUSTOMER SERVICE</p>
+            <p> Help & contact us</p>
+            <p>Orders & shipping</p>
+            <p>Payment & pricing</p>
+            <p>Returns & refunds</p>
+            <p>FAQs</p>
+            <p>Terms & conditions</p>
+            <p>Privacy policy</p>
+            <p>Accessibility</p>
+
+        </div>
+        <div id="footerfour">
+            <p>ABOUT FARFETCH</p>
+            <p> About Us</p>
+            <p>Investors</p>
+            <p>Boutique Partners</p>
+            <p>Affiliate Programme</p>
+            <p>Student discount UNiDAYS</p>
+            <p>Careers</p>
+            <p>
+                <p>Customer Promise</p>
+                <p>FARFETCH App</p>
+                <p>Sitemap</p>
+                <p>Positively FARFETCH</p>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
+<script>
+    var rightdiv = document.querySelector(".right");
+    var local = JSON.parse(localStorage.getItem("farfetchdatabase"));
+
+    var designer = document.getElementById("designer");
+    designer.addEventListener("mouseenter", designerlistcall);
+
+    designer.addEventListener("mouseleave", designerlistcallleave);
+
+
+    var clothing = document.getElementById("clothing");
+    clothing.addEventListener("mouseenter", clothinglistcall);
+    var clothing = document.getElementById("clothing");
+    clothing.addEventListener("mouseleave", clothinglistcallleave);
+    var shoes = document.getElementById("shoes");
+    shoes.addEventListener("mouseenter", shoeslistcall);
+
+    shoes.addEventListener("mouseleave", shoeslistcallleave);
+
+    var clothingclothing = document.getElementById("clothingclothing");
+    clothingclothing.addEventListener("click", clothingshow);
+    var bags = document.getElementById("bags");
+
+    bags.addEventListener("mouseenter", bagslistcall);
+
+    bags.addEventListener("mouseleave", bagslistcallleave);
+
+
+
+
+    function clothingshow() {
+        window.location.href = "womencloth.html";
+    }
+
+    function womenlistcall() {
+        var second = document.querySelector(".second");
+        second.style.display = "flex";
+    }
+
+    function clothinglistcall() {
+
+        var third = document.querySelector(".clothingdiv");
+
+        third.style.display = "flex";
+    }
+
+    function clothinglistcallleave() {
+        var third = document.querySelector(".clothingdiv");
+        third.style.display = "none";
+
+
+
+
+
+
+
+    }
+
+    function shoeslistcall() {
+        //var showdiv = document.querySelector(".clothingdiv");
+        //document.querySelector(".clothingdiv").innerText = "";
+
+
+        var third = document.querySelector(".shoesdiv");
+
+        third.style.display = "flex";
+
+
+    }
+
+    function shoeslistcallleave() {
+        var third = document.querySelector(".shoesdiv");
+        third.style.display = "none";
+
+
+    }
+
+    function bagslistcall() {
+        //var showdiv = document.querySelector(".clothingdiv");
+        //document.querySelector(".clothingdiv").innerText = "";
+
+
+        var third = document.querySelector(".bagsdiv");
+
+        third.style.display = "flex";
+
+
+    }
+
+    function bagslistcallleave() {
+        var third = document.querySelector(".bagsdiv");
+        third.style.display = "none";
+
+
+    }
+
+
+
+    //..........gifts.................
+
+
+    //.............giftend.....................
+
+
+    function designerlistcall() {
+
+
+        //localStorage.setItem("cartdatabase", JSON.stringify([]));
+        //var cartdata = JSON.parse(localStorage.getItem("cartdatabase"));
+
+        var third = document.querySelector(".designerdiv");
+
+        third.style.display = "flex";
+
+
+    }
+
+    function designerlistcallleave() {
+        var third = document.querySelector(".designerdiv");
+        third.style.display = "none";
+
+
+    }
+
+
+
+
+    showproducts(local);
+
+    function showproducts(product) {
+        document.querySelector(".right").innerHTML = "";
+        product.map(function(item) {
+            //cartdata = [];
+
+            if (item.product_type == "cloth" && item.categoryid == "pyjama" && item.subgender == "boy") {
+                console.log(item);
+                var container = document.createElement("div");
+                container.addEventListener("click", function() {
+                    addcart(item);
+
+                });
+
+                container.style.backgroundColor = "white";
+                var img = document.createElement("img");
+                img.src = item.img1;
+
+                var star = document.createElement("div");
+                star.setAttribute("id", "star");
+
+
+
+                // var atag = document.createElement("a");
+                // atag.setAttribute("href", "farfetchcart.html");
+                // atag.textContent = "add to bag";
+                var brand = document.createElement("p");
+                brand.textContent = item.brand;
+                var name = document.createElement("p");
+                name.textContent = item.name;
+                var price = document.createElement("p");
+                price.textContent = item.price;
+                container.append(star, img, brand, name, price);
+                rightdiv.append(container);
+
+            }
+        })
+    }
+
+
+    function addcart(item) {
+        var cartdata = [];
+        cartdata.push(item);
+        localStorage.setItem("cartdatabase", JSON.stringify(cartdata));
+        window.location.href = "farfetchcart.html";
+
+        //console.log(cartdata);
+
+    }
+
+
+    // console.log(local[1].gender);
+
+    function featurefun() {
+        var cat = document.getElementById("featurewomen").value;
+
+        if (cat == "Alexander") {
+            var data1 = local.filter(function(item) {
+                if (item.brand == "Alexander" && item.subgender == "boy") {
+                    console.log(item);
+                    return item;
+                }
+
+
+            })
+        }
+        if (cat == "Balmain") {
+            var data1 = local.filter(function(item) {
+                if (item.brand == "Balmain" && item.subgender == "boy") {
+                    return item;
+                }
+                // console.log(item.gender);
+
+            })
+        }
+
+
+        if (cat == "Valentino") {
+            var data1 = local.filter(function(item) {
+                if (item.brand == "Valentino" && item.subgender == "boy") {
+                    return item;
+                }
+                // console.log(item.gender);
+
+            })
+        }
+
+
+
+
+        showproducts(data1);
+
+
+
+    }
+
+    function pricenumber() {
+        var pricecheck = document.getElementById("filter").value;
+        if (pricecheck == "less") {
+            var data1 = local.filter(function(item) {
+                if (item.price <= 500) {
+                    return item;
+                }
+            })
+        }
+
+        if (pricecheck == "greater") {
+            var data1 = local.filter(function(item) {
+                if (item.price >= 500) {
+                    return item;
+                }
+            })
+        }
+
+        showproducts(data1);
+    }
+
+
+    function sortbyprice() {
+        var pricecheck = document.getElementById("sortbyprice").value;
+        if (pricecheck == "low") {
+            local = local.sort(function(a, b) {
+
+                return a.price - b.price;
+
+            })
+        }
+
+        if (pricecheck == "high") {
+            local = local.sort(function(a, b) {
+
+                return b.price - a.price;
+
+            })
+        }
+
+        showproducts(local);
+    }
+</script>

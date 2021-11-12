@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    var body = document.querySelector("body");
+    var data = [
+        //..............................women cloth...............................................
+
+        //...................................................  women jacket
+
+        {
+            gender: "female",
+            product_type: "cloth",
+            category: "jacket",
+            subcategory: "Biker Jacket",
+            subcategoryid = "bikerjacket",
+            size: "s",
+            color: "white",
+            quality1: "black/pear",
+            quality2: "feather down",
+            quality3: "two-tone design",
+            composition: "Outer: Polyamide 100%, Viscose 68%, Polyester 32%",
+            washing_instruction: "Do Not Wash/Do Not Dry Clean",
+            description: "Rick Owens plays with proportions to deliver this Girders bomber jacket. The American designer combines a voluminous padded construction with a cropped length, creating a sculptural silhouette with a signature avant-garde feel.",
+            brand: "Alexander",
+            name: "Avoine cropped padded jacket",
+            price: "1345",
+            img1: "https://cdn-images.farfetch-contents.com/16/48/71/25/16487125_35881885_480.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/48/71/25/16487125_35881891_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/48/71/25/16487125_35881896_1000.jpg"
+
+
+
+
+        }, {
+            gender: "female",
+            product_type: "cloth",
+            category: "jacket",
+            subcategory: "Blazer",
+            subcategoryid = "blazer",
+            size: "s",
+            color: "black",
+            quality1: "black/pear",
+            quality2: "feather down",
+            quality3: "two-tone design",
+            composition: "Outer: Polyamide 100%, Viscose 68%, Polyester 32%",
+            washing_instruction: "Do Not Wash/Do Not Dry Clean",
+            description: "Adding a signature subversive twist to tailoring, Alexander Wang delivers this tailored leather blazer. It features a cinched waist that, coupled with dart binding, creates an unorthodox sculptural silhouette.",
+            name: "Avoine cropped padded jacket",
+            price: "745",
+            img1: "https://cdn-images.farfetch-contents.com/16/70/54/28/16705428_36472450_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/70/54/28/16705428_36473239_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/70/54/28/16705428_36473242_1000.jpg"
+
+
+
+
+        }, {
+            gender: "female",
+            product_type: "cloth",
+            category: "jacket",
+            subcategory: "cropped Jacket",
+            subcategoryid = "croppedjacket",
+            size: "s",
+            color: "beige",
+            quality1: "black/pear",
+            quality2: "feather down",
+            quality3: "two-tone design",
+            composition: "Outer: Polyamide 100%, Viscose 68%, Polyester 32%",
+            washing_instruction: "Do Not Wash/Do Not Dry Clean",
+            description: "The jacquard monogram print is one of Balmain’s most striking motifs, found throughout this cropped bomber jacket. An ultra-contemporary silhouette, this piece is is destined for coordinating with one of the label’s matching tops.",
+            brand: "Alexander",
+            name: "Avoine cropped padded jacket",
+            price: "1745",
+            img1: "https://cdn-images.farfetch-contents.com/17/23/86/75/17238675_6895d6a2-48dc-43b9-a6b4-8421d7b96fa4_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/17/23/86/75/17238675_c2894042-46e6-492d-a154-36d122d92bd3_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/17/23/86/75/17238675_f519c965-eecd-4e83-bf48-0e7408c6d05b_1000.jpg"
+
+
+
+
+        },
+        //................women skirts..........................
+
+        {
+            gender: "female",
+            product_type: "cloth",
+            category: "skirt",
+            subcategory: "Fitted Skirt",
+            subcategoryid: "fittedskirt",
+            size: "34",
+            color: "black",
+            quality1: "wool",
+            quality2: "high waist",
+            quality3: "two side flap pockets",
+            composition: "Outer: Polyamide 100%, Viscose 68%, Polyester 32%",
+            washing_instruction: "Do Not Wash/Do Not Dry Clean",
+            description: "Balmain makes a strong case for the mini with this wrap-style belted skirt. Made from wool with a cotton-blend, this sleek black piece has been detailed with a gold-tone 'B' logo buckle and two front flap pockets.",
+            brand: "Balmain",
+            name: "B-logo wrap skirt",
+            price: "411",
+            img1: "https://cdn-images.farfetch-contents.com/16/53/94/27/16539427_32261919_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/53/94/27/16539427_32261916_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/53/94/27/16539427_32261888_1000.jpg"
+        },
+
+        {
+            gender: "female",
+            product_type: "cloth",
+            category: "skirt",
+            subcategory: "Full Skirts",
+            subcategoryid: "fullskirts",
+            size: "34",
+            color: "orange/yellow/pink",
+            quality1: "cotton",
+            quality2: "ankled-length",
+            quality3: "tiered skirt",
+            composition: "Outer: Polyamide 100%, Viscose 68%, Polyester 32%",
+            washing_instruction: "Do Not Wash/Do Not Dry Clean",
+            description: "This sunflower maxi skirt embodies the vibrant energy and elegance of the Dolce & Gabbana brand. Boasting an orange, pink and yellow design, this garment falls over your body with a tiered design and flowy silhouette.",
+            brand: "Balmain",
+            name: "sunflower print tiered skirt",
+            price: "611",
+            img1: "https://cdn-images.farfetch-contents.com/16/92/85/70/16928570_33749320_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/92/85/70/16928570_33749315_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/92/85/70/16928570_33749319_1000.jpg"
+        },
+
+        {
+            gender: "female",
+            product_type: "cloth",
+            category: "skirt",
+            subcategory: "Pencil Skirts",
+            subcategoryid: "pencilskirt",
+            size: "s",
+            color: "black",
+            quality1: "pencil design",
+            quality2: "calf-length",
+            quality3: "high waist",
+            composition: "Outer: Polyamide 100%, Viscose 68%, Polyester 32%",
+            washing_instruction: "Do Not Wash/Do Not Dry Clean",
+            description: "Let's not skirt around the issue - this black FF-print pencil skirt from Fendi is made for you. We know it, you know it, the skirt knows it.",
+            brand: "Balmain",
+            name: "FF-print pencil skirt",
+            price: "911",
+            img1: "https://cdn-images.farfetch-contents.com/16/11/85/36/16118536_30683880_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/11/85/36/16118536_30682336_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/11/85/36/16118536_30683881_1000.jpg"
+        },
+
+
+
+        //  ..................................................women coats........................
+
+
+
+        {
+            gender: "female",
+            product_type: "cloth",
+            category: "coat",
+            subcategory: "capes",
+            subcategoryid: "cape",
+            size: "s",
+            color: "forest green",
+            quality1: "forest green",
+            quality2: "calf-length",
+            quality3: "high waist",
+            composition: "Outer: Polyamide 100%, Viscose 68%, Polyester 32%",
+            washing_instruction: "Do Not Wash/Do Not Dry Clean",
+            description: "Stockholm-based Totême 'explores the appeal of a modern uniform' and does so using refined materials and classic lines. Crafted from recycled polyamide in a forest green shade, this cape is cut for an oversized fit and a draped silhouette. With three-quarter length sleeves, it fastens at the front with a half-zip and is complete with a hood and high neck for increased coverage.",
+            brand: "Balmain",
+            name: "drapped zipped hooded cape",
+            price: "311",
+            img1: "https://cdn-images.farfetch-contents.com/16/70/54/57/16705457_36362827_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/70/54/57/16705457_36363212_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/70/54/57/16705457_36363210_1000.jpg"
+        },
+
+        {
+            gender: "female",
+            product_type: "cloth",
+            category: "coat",
+            subcategory: "Double Breasted & Peacoats",
+            subcategoryid: "double",
+            size: "s",
+            color: "beigie",
+            quality1: "pencil design",
+            quality2: "calf-length",
+            quality3: "high waist",
+            composition: "Outer: Polyamide 100%, Viscose 68%, Polyester 32%",
+            washing_instruction: "Do Not Wash/Do Not Dry Clean",
+            description: "Let's not skirt around the issue - this black FF-print pencil skirt from Fendi is made for you. We know it, you know it, the skirt knows it.",
+            brand: "Alexander",
+            name: "double-breasted tailored coat",
+            price: "788",
+            img1: "https://cdn-images.farfetch-contents.com/17/19/86/20/17198620_34932341_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/17/19/86/20/17198620_34932317_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/17/19/86/20/17198620_34932343_1000.jpg"
+        },
+
+
+
+        {
+            gender: "female",
+            product_type: "cloth",
+            category: "coat",
+            subcategory: "Leather coats",
+            subcategoryid: "leathercoat",
+            size: "s",
+            color: "black",
+            quality1: "pencil design",
+            quality2: "calf-length",
+            quality3: "high waist",
+            composition: "Outer: Polyamide 100%, Viscose 68%, Polyester 32%",
+            washing_instruction: "Do Not Wash/Do Not Dry Clean",
+            description: "Let's not skirt around the issue - this black FF-print pencil skirt from Fendi is made for you. We know it, you know it, the skirt knows it.",
+            brand: "Balmain",
+            name: "FF-print pencil skirt",
+            price: "1911",
+            img1: "https://cdn-images.farfetch-contents.com/16/11/85/36/16118536_30683880_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/11/85/36/16118536_30682336_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/11/85/36/16118536_30683881_1000.jpg"
+        },
+
+
+
+        {
+            gender: "female",
+            product_type: "cloth",
+            category: "coat",
+            subcategory: "Military coats",
+            subcategoryid: "militarycoat",
+            size: "s",
+            color: "Navy/mightnight Blue",
+            quality1: "pencil design",
+            quality2: "calf-length",
+            quality3: "high waist",
+            composition: "Outer: Polyamide 100%, Viscose 68%, Polyester 32%",
+            washing_instruction: "Do Not Wash/Do Not Dry Clean",
+            description: "Versace takes the classic peacoat and updates it with contemporary details. Notice the padded shell sleeves and zipped and flap pockets typically seen on bomber jackets. ",
+            brand: "Balmain",
+            name: "double-breasted panelled peacoat",
+            price: "5644",
+            img1: "https://cdn-images.farfetch-contents.com/16/80/80/37/16808037_33807261_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/80/80/37/16808037_33805576_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/80/80/37/16808037_33807274_1000.jpg"
+        },
+
+
+
+
+        //.................................................//women coat end//...................................
+
+
+
+
+
+        {
+            gender: "female",
+            product_type: "cloth",
+            category: "suits",
+            brand: "Prada",
+            name: "double-breasted tailored blazer",
+            price: "1961",
+            img1: "https://cdn-images.farfetch-contents.com/15/69/84/73/15698473_28629256_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/15/69/84/73/15698473_28629254_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/15/69/84/73/15698473_28626910_1000.jpg"
+        }, {
+            gender: "female",
+            product_type: "cloth",
+            category: "top",
+            brand: "Valentino",
+            name: "Heather gathered shirt",
+            price: "873",
+            img1: "https://cdn-images.farfetch-contents.com/16/63/41/95/16634195_36387645_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/63/41/95/16634195_36388336_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/63/41/95/16634195_36387648_1000.jpg"
+        },
+        //................................................ women bags..............................................................
+        {
+            gender: "female",
+            product_type: "bag",
+            category: "backpackbag",
+            brand: "Alexander",
+            name: "Joy Rider water-repellent backpack",
+            price: "637",
+            img1: "https://cdn-images.farfetch-contents.com/16/81/42/12/16814212_35653395_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/81/42/12/16814212_35653394_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/81/42/12/16814212_35654309_1000.jpg"
+        }, {
+            gender: "female",
+            product_type: " bag",
+            category: "beltbag",
+            brand: "Balmain",
+            name: "two-tone belt bag",
+            price: "1058",
+            img1: "https://cdn-images.farfetch-contents.com/17/02/56/07/17025607_c51fd0be-0c4c-438b-95aa-aad09781cd0a_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/17/02/56/07/17025607_8dd1f59f-7401-4617-af96-ce7dc93e34b7_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/17/02/56/07/17025607_3d2d693a-c3e4-44a3-8bb2-55997d5d1e96_1000.jpg"
+        }, {
+            gender: "female",
+            product_type: "bag",
+            category: "bucketbag",
+            brand: "Prada",
+            name: "Miller bucket bag",
+            price: "1381",
+            img1: "https://cdn-images.farfetch-contents.com/16/21/00/27/16210027_32970085_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/21/00/27/16210027_32971128_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/21/00/27/16210027_32970087_1000.jpg"
+        }, {
+            gender: "female",
+            product_type: "bag",
+            category: "clutchbag",
+            brand: "Valentino",
+            name: "Uptown YSL-plaque pouch",
+            price: "1129",
+            img1: "https://cdn-images.farfetch-contents.com/17/11/39/87/17113987_10c242ed-6c6f-47c3-87e1-d357db611a60_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/17/11/39/87/17113987_5e100a15-2f70-4210-956b-e65c34b3cb7b_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/17/11/39/87/17113987_d824c5a2-d5a5-42ca-bdc6-d3c8fb14e544_1000.jpg"
+        },
+        //..................women shoes..................................................
+        {
+            gender: "female",
+            product_type: "shoes",
+            category: "boot",
+            brand: "Alexander",
+            name: "Joplin 50mm buckle detail boots",
+            price: "2224",
+            img1: "https://cdn-images.farfetch-contents.com/17/52/20/42/17522042_36323568_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/17/52/20/42/17522042_36322641_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/17/52/20/42/17522042_36321930_1000.jpg"
+        }, {
+            gender: "female",
+            product_type: " shoes",
+            category: "slide",
+            brand: "Balmain",
+            name: "Fluffita flatform sandals",
+            price: "239",
+            img1: "https://cdn-images.farfetch-contents.com/16/76/86/97/16768697_35581962_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/76/86/97/16768697_35583164_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/76/86/97/16768697_35583163_1000.jpg"
+        }, {
+            gender: "female",
+            product_type: "shoes",
+            category: "pump",
+            brand: "Prada",
+            name: "Hangisi satin pumps",
+            price: "1854",
+            img1: "https://cdn-images.farfetch-contents.com/17/33/27/38/17332738_35823537_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/17/33/27/38/17332738_35825357_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/17/33/27/38/17332738_35825350_1000.jpg"
+        }, {
+            gender: "female",
+            product_type: "shoes",
+            category: "sandle",
+            brand: "Valentino",
+            name: "rhinestone-embellished satin mules",
+            price: "1929",
+            img1: "https://cdn-images.farfetch-contents.com/16/33/67/55/16336755_35238744_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/33/67/55/16336755_35239004_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/33/67/55/16336755_35238745_1000.jpg"
+        },
+        //..........................jewelaary..........................................
+        {
+            gender: "female",
+            product_type: "jewelary",
+            category: "bracelet",
+            brand: "Cartier",
+            name: "Kira enamel bangle",
+            price: "214",
+            img1: "https://cdn-images.farfetch-contents.com/16/03/34/39/16033439_30145784_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/03/34/39/16033439_30144904_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/03/34/39/16033439_30145784_1000.jpg"
+        }, {
+            gender: "female",
+            product_type: "jewelary",
+            category: "earring",
+            brand: "Chopard",
+            name: "pearl detail drop hoop earrings",
+            price: "214",
+            img1: "https://cdn-images.farfetch-contents.com/16/01/92/92/16019292_36506988_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/01/92/92/16019292_36508568_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/01/92/92/16019292_36506985_1000.jpg"
+        }, {
+            gender: "female",
+            product_type: "jewelary",
+            category: "necklace",
+            brand: "Cartier",
+            name: "heart pendant necklace",
+            price: "195",
+            img1: "https://cdn-images.farfetch-contents.com/15/37/80/32/15378032_27410055_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/15/37/80/32/15378032_27410057_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/15/37/80/32/15378032_27410055_1000.jpg"
+        }, {
+            gender: "female",
+            product_type: "jewelary",
+            category: "ring",
+            brand: "Chopard",
+            name: "Fendi crystal embellished ring",
+            price: "535",
+            img1: "https://cdn-images.farfetch-contents.com/17/05/70/42/17057042_36124087_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/17/05/70/42/17057042_36123367_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/17/05/70/42/17057042_36124087_1000.jpg"
+        },
+        //.......................Man watch.......................
+
+        {
+            gender: "male",
+            product_type: "watch",
+            category: "fashionwatch",
+            brand: "Omega",
+            name: "The Greca Chrono",
+            price: "2114",
+            img1: "https://cdn-images.farfetch-contents.com/15/88/80/29/15888029_31034090_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/15/88/80/29/15888029_31034092_80.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/15/88/80/29/15888029_31034099_80.jpg"
+        }, {
+            gender: "male",
+            product_type: " watch",
+            category: "divingwatch",
+            brand: "Rolex",
+            name: "customised pre-owned Rolex Explorer",
+            price: "66000",
+            img1: "https://cdn-images.farfetch-contents.com/15/66/35/17/15663517_33209485_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/15/66/35/17/15663517_33208802_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/15/66/35/17/15663517_33210737_1000.jpg"
+        }, {
+            gender: "male",
+            product_type: "watch",
+            category: "dresswatch",
+            brand: "Zenith",
+            name: "pre-owned Rolex GMT-Master",
+            price: "82539",
+            img1: "https://cdn-images.farfetch-contents.com/15/33/41/05/15334105_27902865_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/15/33/41/05/15334105_27902866_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/15/33/41/05/15334105_27902865_1000.jpg"
+        },
+        //.......................man cloth.......................
+        {
+            gender: "male",
+            product_type: "cloth",
+            category: "coat",
+            brand: "Alexander",
+            name: "logo-print hooded padded coat",
+            price: "3010",
+            img1: "https://cdn-images.farfetch-contents.com/17/49/94/51/17499451_78f7d2c9-fd06-4b9c-8e94-7d5c62ea8278_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/17/49/94/51/17499451_a06a8c0a-e9be-4466-9794-1d2951914ff6_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/17/49/94/51/17499451_3aed611b-08c8-43db-a0af-0459d4641a95_1000.jpg"
+        }, {
+            gender: "male",
+            product_type: "cloth",
+            category: "jeans",
+            brand: "Prada",
+            name: "Comfort slim-fit jeans",
+            price: "1000",
+            img1: "https://cdn-images.farfetch-contents.com/17/44/84/80/17448480_36199384_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/17/44/84/80/17448480_36197678_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/17/44/84/80/17448480_36199390_1000.jpg"
+        }, {
+            gender: "male",
+            product_type: "cloth",
+            category: "shirt",
+            brand: "Burberry",
+            name: "striped cotton shirt",
+            price: "505",
+            img1: "https://cdn-images.farfetch-contents.com/16/64/57/82/16645782_32856299_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/64/57/82/16645782_32857065_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/64/57/82/16645782_32857067_1000.jpg"
+        }, {
+            gender: "male",
+            product_type: "cloth",
+            category: "suit",
+            brand: "Gucci",
+            name: "single-breasted wool suit",
+            price: "1909",
+            img1: "https://cdn-images.farfetch-contents.com/17/42/40/32/17424032_36271014_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/17/42/40/32/17424032_36271009_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/17/42/40/32/17424032_36269989_1000.jpg"
+        }, {
+            gender: "male",
+            product_type: "cloth",
+            category: "tshirt",
+            brand: "Burberry",
+            name: "boxed logo-print skull T-shirt",
+            price: "2117",
+            img1: "https://cdn-images.farfetch-contents.com/17/42/84/89/17428489_36450646_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/17/42/84/89/17428489_36450648_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/17/42/84/89/17428489_36450651_1000.jpg"
+        },
+        //..........................man shoes.................................................
+        {
+            gender: "male",
+            product_type: "shoes",
+            category: "boot",
+            brand: "Alexander",
+            name: "Greca Labyrinth leather Chelsea boots",
+            price: "1653",
+            img1: "https://cdn-images.farfetch-contents.com/16/87/22/46/16872246_34835045_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/87/22/46/16872246_34835047_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/87/22/46/16872246_34835046_1000.jpg"
+        }, {
+            gender: "male",
+            product_type: "shoes",
+            category: "slide",
+            brand: "Prada",
+            name: "logo-print sliders",
+            price: "168",
+            img1: "https://cdn-images.farfetch-contents.com/16/86/35/11/16863511_33675040_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/86/35/11/16863511_33576674_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/86/35/11/16863511_33675058_1000.jpg"
+        }, {
+            gender: "male",
+            product_type: "shoes",
+            category: "pump",
+            brand: "Burberry",
+            name: "brushed leather pump shoes",
+            price: "922",
+            img1: "https://cdn-images.farfetch-contents.com/15/42/21/83/15422183_29107898_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/15/42/21/83/15422183_29107899_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/15/42/21/83/15422183_29107901_1000.jpg"
+        }, {
+            gender: "male",
+            product_type: "shoes",
+            category: "sandle",
+            brand: "Gucci",
+            name: "FF Vertigo print slides",
+            price: "570",
+            img1: "https://cdn-images.farfetch-contents.com/16/97/62/43/16976243_35646491_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/97/62/43/16976243_35646488_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/97/62/43/16976243_35646487_1000.jpg"
+        },
+        //.......................man bag.............................
+        {
+            gender: "male",
+            product_type: "bag",
+            category: "backpackbag",
+            brand: "Alexander",
+            name: "curved-logo backpack",
+            price: "1300",
+            img1: "https://cdn-images.farfetch-contents.com/17/43/07/81/17430781_36124134_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/17/43/07/81/17430781_36124131_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/17/43/07/81/17430781_36122731_1000.jpg"
+        }, {
+            gender: "male",
+            product_type: "bag",
+            category: "beltbag",
+            brand: "Prada",
+            name: "tiger-print belt bag",
+            price: "455",
+            img1: "https://cdn-images.farfetch-contents.com/14/80/86/41/14808641_26374797_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/14/80/86/41/14808641_26374799_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/14/80/86/41/14808641_26379867_1000.jpg"
+        }, {
+            gender: "male",
+            product_type: "bag",
+            category: "clutchbag",
+            brand: "Prada",
+            name: "monogram-pattern clutch bag",
+            price: "420",
+            img1: "https://cdn-images.farfetch-contents.com/16/62/40/60/16624060_34572645_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/15/42/21/83/15422183_29107899_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/15/42/21/83/15422183_29107901_1000.jpg"
+        }, {
+            gender: "male",
+            product_type: "bag",
+            category: "luggage",
+            brand: "Gucci",
+            name: "Bank Spinner 84 suitcase",
+            price: "3707",
+            img1: "https://cdn-images.farfetch-contents.com/12/92/05/84/12920584_30834421_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/12/92/05/84/12920584_30834420_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/12/92/05/84/12920584_30834419_1000.jpg"
+        },
+        //...................kids................................
+
+        //.................................kids girls....................................
+
+        {
+            gender: "kid",
+            subgender: "girl",
+            product_type: "cloth",
+            category: "jacket",
+            brand: "Alexander",
+            name: "Stella Loves print puffer jacket",
+            price: "239",
+            img1: "https://cdn-images.farfetch-contents.com/16/48/63/07/16486307_33302911_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/48/63/07/16486307_33302908_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/48/63/07/16486307_33302911_1000.jpg"
+        }, {
+            gender: "kid",
+            subgender: "girl",
+            product_type: "cloth",
+            category: "skirt",
+            brand: "Balmain",
+            name: "layered tulle skirt",
+            price: "121",
+            img1: "https://cdn-images.farfetch-contents.com/16/80/77/51/16807751_33683410_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/80/77/51/16807751_33682424_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/80/77/51/16807751_33684027_80.jpg"
+        }, {
+            gender: "kid",
+            subgender: "girl",
+            product_type: "cloth",
+            category: "suits",
+            brand: "Prada",
+            name: "ogo-print romper set",
+            price: "156",
+            img1: "https://cdn-images.farfetch-contents.com/17/07/49/12/17074912_34375899_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/17/07/49/12/17074912_34377573_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/17/07/49/12/17074912_34376720_80.jpg"
+        }, {
+            gender: "kid",
+            subgender: "girl",
+            product_type: "cloth",
+            category: "top",
+            brand: "Valentino",
+            name: "flocked-logo T-shirt",
+            price: "200",
+            img1: "https://cdn-images.farfetch-contents.com/16/80/04/36/16800436_34383374_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/80/04/36/16800436_34383376_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/80/04/36/16800436_34381528_1000.jpg"
+        },
+        //...........................................kid girl shoes..................
+        {
+            gender: "kid",
+            subgender: "girl",
+            product_type: "shoes",
+            category: "boot",
+            brand: "Alexander",
+            name: "Norte ankle boots",
+            price: "190",
+            img1: "https://cdn-images.farfetch-contents.com/15/36/70/09/15367009_27215414_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/15/36/70/09/15367009_27216451_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/15/36/70/09/15367009_27217621_80.jpg"
+        }, {
+
+            gender: "kid",
+            subgender: "girl",
+            product_type: " shoes",
+            category: "slide",
+            brand: "Balmain",
+            name: "print pool slides",
+            price: "514",
+            img1: "https://cdn-images.farfetch-contents.com/14/21/34/26/14213426_20018996_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/14/21/34/26/14213426_20018997_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/14/21/34/26/14213426_20018996_1000.jpg"
+        }, {
+
+            gender: "kid",
+            subgender: "girl",
+            product_type: "shoes",
+            category: "pump",
+            brand: "Prada",
+            name: "charm ballerina shoes",
+            price: "432",
+            img1: "https://cdn-images.farfetch-contents.com/11/78/18/17/11781817_10860215_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/11/78/18/17/11781817_10860214_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/11/78/18/17/11781817_10860215_1000.jpg"
+        }, {
+
+            gender: "kid",
+            subgender: "girl",
+            product_type: "shoes",
+            category: "sandle",
+            brand: "Valentino",
+            name: "front bows sandals",
+            price: "124",
+            img1: "https://cdn-images.farfetch-contents.com/14/83/40/95/14834095_25231683_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/14/83/40/95/14834095_25231689_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/14/83/40/95/14834095_25231683_1000.jpg"
+        },
+        //......................................kids boys..............................
+
+        //.................................kids boys....................................
+
+        {
+            gender: "kid",
+            subgender: "boy",
+            product_type: "cloth",
+            category: "jacket",
+            brand: "Alexander",
+            name: "metallic-effect padded jacket",
+            price: "297",
+            img1: "https://cdn-images.farfetch-contents.com/17/06/44/71/17064471_34168446_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/17/06/44/71/17064471_34167735_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/17/06/44/71/17064471_34167726_1000.jpg"
+        }, {
+            gender: "kid",
+            subgender: "boy",
+            product_type: "cloth",
+            category: "jeans",
+            brand: "Balmain",
+            name: "paint-splatter distressed-effect jeans",
+            price: "485",
+            img1: "https://cdn-images.farfetch-contents.com/17/23/71/13/17237113_35048492_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/17/23/71/13/17237113_35045943_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/17/23/71/13/17237113_35045936_80.jpg"
+        }, {
+            gender: "kid",
+            subgender: "boy",
+            product_type: "cloth",
+            category: "suits",
+            brand: "Prada",
+            name: "Icon logo print tracksuit set",
+            price: "166",
+            img1: "https://cdn-images.farfetch-contents.com/17/38/52/18/17385218_35924557_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/17/38/52/18/17385218_35924560_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/17/38/52/18/17385218_35924557_1000.jpg"
+        }, {
+            gender: "kid",
+            subgender: "boy",
+            product_type: "cloth",
+            category: "top",
+            brand: "Valentino",
+            name: "logo print short-sleeve T-shirt",
+            price: "184",
+            img1: "https://cdn-images.farfetch-contents.com/16/81/81/25/16818125_34389093_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/81/81/25/16818125_34389095_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/81/81/25/16818125_34387476_1000.jpg"
+        },
+        //...........................................kid girl shoes..................
+        {
+            gender: "kid",
+            subgender: "boy",
+            product_type: "shoes",
+            category: "boot",
+            brand: "Alexander",
+            name: "ProTECHt snow boots",
+            price: "120",
+            img1: "https://cdn-images.farfetch-contents.com/15/88/43/29/15884329_29515214_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/15/88/43/29/15884329_29516287_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/15/88/43/29/15884329_29516288_1000.jpg"
+        }, {
+
+            gender: "kid",
+            subgender: "boy",
+            product_type: " shoes",
+            category: "slide",
+            brand: "Balmain",
+            name: "Vintage Check Slide sandals",
+            price: "338",
+            img1: "https://cdn-images.farfetch-contents.com/15/11/16/80/15111680_26183517_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/15/11/16/80/15111680_26183520_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/15/11/16/80/15111680_26183525_1000.jpg"
+        }, {
+
+            gender: "kid",
+            subgender: "boy",
+            product_type: "shoes",
+            category: "pump",
+            brand: "Prada",
+            name: "crown patch velvet slippers",
+            price: "622",
+            img1: "https://cdn-images.farfetch-contents.com/14/08/74/36/14087436_23133490_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/14/08/74/36/14087436_23133494_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/14/08/74/36/14087436_23133490_1000.jpg"
+        }, {
+
+            gender: "kid",
+            subgender: "boy",
+            product_type: "shoes",
+            category: "sandle",
+            brand: "Valentino",
+            name: "Adilette logo touch-strap sandals",
+            price: "73",
+            img1: "https://cdn-images.farfetch-contents.com/14/84/08/85/14840885_35905673_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/14/84/08/85/14840885_35904840_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/14/84/08/85/14840885_35905672_1000.jpg"
+        },
+        //...................................Women Active wears.................................
+        {
+            gender: "female",
+            product_type: "activewear",
+            category: "gymbags",
+            brand: "Alexander",
+            name: "waterproof faux-fur ski gloves",
+            price: "215",
+            img1: "https://cdn-images.farfetch-contents.com/14/49/97/05/14499705_23034382_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/14/49/97/05/14499705_23034384_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/14/49/97/05/14499705_23034387_80.jpg"
+        }, {
+            gender: "female",
+            product_type: "activewear",
+            category: "allinone",
+            brand: "Balmain",
+            name: "spaghetti-strap performance jumpsuit",
+            price: "170",
+            img1: "https://cdn-images.farfetch-contents.com/15/50/55/71/15505571_30243371_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/15/50/55/71/15505571_30246372_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/15/50/55/71/15505571_30246374_1000.jpg"
+        }, {
+            gender: "female",
+            product_type: "activewear",
+            category: "footwear",
+            brand: "Prada",
+            name: "double-breasted tailored blazer",
+            price: "171",
+            img1: "https://cdn-images.farfetch-contents.com/16/71/43/66/16714366_35834474_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/71/43/66/16714366_35834473_1000.jpg",
+            img3: "Court Tourino low-top sneakers"
+        }, {
+            gender: "female",
+            product_type: "activewear",
+            category: "shorts",
+            brand: "Valentino",
+            name: "print cycling shorts",
+            price: "148",
+            img1: "https://cdn-images.farfetch-contents.com/15/47/05/53/15470553_29581161_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/15/47/05/53/15470553_36145780_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/15/47/05/53/15470553_29581160_1000.jpg"
+        }, {
+            gender: "female",
+            product_type: "activewear",
+            category: "sweamwear",
+            brand: "Gucci",
+            name: "Iconic Chain halterneck swimsuit",
+            price: "643",
+            img1: "https://cdn-images.farfetch-contents.com/16/66/51/88/16665188_32889633_1000.jpg",
+            img2: "https://cdn-images.farfetch-contents.com/16/66/51/88/16665188_32853763_1000.jpg",
+            img3: "https://cdn-images.farfetch-contents.com/16/66/51/88/16665188_32855163_1000.jpg"
+        },
+        //................................................ women ..............................................................
+
+
+
+
+
+
+
+
+    ];
+    /*  localStorage.setItem("farfetchdatabase", JSON.stringify([]));
+      var local = JSON.parse(localStorage.getItem("farfetchdatabase"));
+      var count = 0;
+      data.map(function(item) {
+
+          console.log(item);
+          count++;
+          local.push(item);
+
+
+
+      });
+      // console.log(count);
+      localStorage.setItem("farfetchdatabase", JSON.stringify(local));
+      console.log(local);*/
+</script>

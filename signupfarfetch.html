@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            text-align: center;
+            width: 500px;
+            padding: 20px;
+            margin: auto;
+        }
+        
+        .second {
+            border-bottom: 1px solid black;
+            width: 270px;
+            height: 40px;
+            text-align: center;
+            margin: auto;
+            margin-top: 15px;
+            box-sizing: border-box;
+            display: flex;
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .second>div:nth-child(1) {
+            margin-right: 35px;
+            text-align: center;
+        }
+        
+        .third {
+            width: 300px;
+            margin: auto;
+            text-align: left;
+        }
+        
+        #signin {
+            text-align: center;
+            justify-content: center;
+            padding-top: 15px;
+            box-sizing: border-box;
+            width: 60px;
+            height: 100%;
+        }
+        
+        #here {
+            text-align: center;
+            justify-content: center;
+            padding-top: 15px;
+            box-sizing: border-box;
+            border-bottom: 2px solid black;
+            width: 40%;
+            height: 100%;
+        }
+        
+        input {
+            height: 40px;
+            width: 270px;
+            margin-top: 20px;
+        }
+        
+        #submitbtn {
+            margin-top: 30px;
+            width: 280px;
+            height: 50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 7px;
+            font-size: 22px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        label {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="first">
+            <h2>you are almost here</h2>
+        </div>
+        <div class="second">
+            <div id="signin"><a href="signin.html">SIGN IN</a></div>
+            <div id="here">I AM HERE</div>
+
+        </div>
+        <div class="third">
+            <form id="frm">
+                <table>
+                    <tr>
+                        <td><label>Email Address</label></td>
+                    </tr>
+                    <tr>
+                        <td> <input type="text" id="email" />
+                        </td>
+
+                        <tr>
+                            <td> <input type="submit" id="submitbtn" value="Create Account" /></td>
+                        </tr>
+                </table>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    document.getElementById("frm").addEventListener("submit", callfun);
+    //var data = JSON.parse(localStorage.getItem("createaccount")) || [];
+
+    function callfun(e) {
+        e.preventDefault();
+        var data = [];
+        var email = document.getElementById("email").value;
+        var obj = {
+            email: email
+        };
+        data.push(obj);
+        localStorage.setItem("createaccount", JSON.stringify(data));
+        window.location.href = "register.html";
+        console.log(data);
+    }
+</script>
