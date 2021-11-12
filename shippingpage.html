@@ -228,7 +228,7 @@
                     <tr>
                         <div id="countryrow">
                             <label>country/region*</label><br>
-                            <select>
+                            <select id="country">
                                <option value="india">india</option>
                                <option value="pakistan">pakistan</option>
                                <option value="israel">islael</option>
@@ -251,11 +251,11 @@
                         <div id="citystaterow">
                             <div style="margin-right: 10px;">
                                 <label>city*</label><br>
-                                <input type="text" id="name1">
+                                <input type="text" id="city">
                             </div>
                             <div>
                                 <label>state*</label><br>
-                                <input type="text" id="name2">
+                                <input type="text" id="state">
                             </div>
                         </div>
                     </tr>
@@ -263,11 +263,11 @@
                         <div id="zipphonerow">
                             <div style="margin-right: 10px;">
                                 <label>zipcode*</label><br>
-                                <input type="text" id="name1">
+                                <input type="text" id="zipcode">
                             </div>
                             <div>
                                 <label>phone number*</label><br>
-                                <input type="text" id="name2">
+                                <input type="text" id="phone">
                             </div>
                         </div>
                     </tr>
@@ -307,8 +307,23 @@
 
 </html>
 <script>
-    var cartdata = JSON.parse(localStorage.getItem("checkout"));
+    var cartdata = JSON.parse(localStorage.getItem("shippingaddress")) || [];
+
+
+    var firstname = document.getElementById("name1");
+    var lastname = document.getElementById("name2");
+    var country = document.getElementById("country");
+    var address = document.getElementById("address");
+    var city = document.getElementById("city");
+    var state = document.getElementById("state");
+    var zipcode = document.getElementById("zipcode");
+
+    var phone = document.getElementById("phone");
+
+
     var imgdivnew = document.getElementById("imgdivnew");
+    var savecontinue = document.getElementById("savecontinue");
+    savecontinue.addEventListener("click", checkallfield);
     var totalprice = document.getElementById("totalprice");
     var sum = 0;
     for (i = 0; i < cartdata.length; i++) {
@@ -353,5 +368,15 @@
 
 
         });
+    }
+
+    function checkallfield() {
+        if (firstname.value != "" && lastname.value != "" && country.value != "" && address.value != "" && city.value != "" && state.value != "" && zipcode.value != "" && phone.value != "") {
+            //console.log(" you can proceed");
+
+
+        } else {
+            console.log("empty..........")
+        }
     }
 </script>

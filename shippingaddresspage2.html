@@ -59,6 +59,7 @@
             color: white;
             justify-content: space-between;
             display: flex;
+            margin-top: 200px;
         }
         
         #footer1 {
@@ -232,6 +233,33 @@
             margin-bottom: 20px;
             padding-top: 20px;
         }
+        
+        #addressdetails {
+            width: 820px;
+            height: 100px;
+            border: 1px solid gray;
+        }
+        
+        #left {
+            margin-top: 100px;
+        }
+        
+        #addressdetails1 {
+            text-align: end;
+            width: 820px;
+        }
+        
+        #editaddress {
+            width: 200px;
+            height: 40px;
+            border: 1px solid gray;
+            margin-left: 620px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            margin-top: 20px;
+            padding-top: 10px;
+        }
     </style>
 </head>
 
@@ -248,45 +276,10 @@
     <hr>
     <div id="bodycontent">
         <div id="left">
-            <h2>Select your payment method</h2>
-            <div id="divselect">
-                <div id="selectone">
-                    paypal
-                </div>
-                <div id="selecttwo">
-                    Debit or Credit card
-                </div>
-            </div>
-            <div id="filldata">
-                <h4>CARD DETAILS</h4>
-                <form id="frm">
-                    <table>
-                        <tr>
-                            <label>card holder name</label><br>
-                            <input type="text" id="name">
-                        </tr>
-
-                        <tr>
-                            <div id="cardrow">
-                                <div>
-                                    <label>card Number</label><br>
-                                    <input type="text" id="cardnum"></div>
-                                <div>
-                                    <label>Expiry Date</label><br>
-                                    <input type="text" id="expirydate" placeholder="MM/YY"></div>
-                            </div>
-                        </tr>
-
-                        <tr>
-                            <label>security code</label><br>
-                            <input type="password" id="password">
-                        </tr>
-
-
-                    </table>
-                </form>
-
-
+            <h2>Select your Address</h2>
+            <div id="addressdetails"></div>
+            <div id="addressdetails1">
+                <div id="editaddress">Add Address</div>
             </div>
 
         </div>

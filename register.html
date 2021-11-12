@@ -82,7 +82,7 @@
 <body>
     <div id="main">
         <div class="first">
-            <h2>you are almost here</h2>
+            <h2>REGISTER YOURSELF</h2>
         </div>
 
         <div class="third">
@@ -94,7 +94,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td> <input type="text" id="name" />
+                        <td> <input type="text" id="name" required />
                         </td>
                     </tr>
                     <tr>
@@ -103,17 +103,17 @@
                         </td>
                     </tr>
                     <tr>
-                        <td> <input type="text" id="email" />
+                        <td> <input type="text" id="email" required />
                         </td>
                     </tr>
                     <tr>
                         <td> <label>Password</label></td>
                     </tr>
                     <tr>
-                        <td> <input type="password" id="password" /></td>
+                        <td> <input type="password" id="password" required/></td>
                     </tr>
                     <tr>
-                        <td> <input type="submit" id="submit" value="SIGN IN" /></td>
+                        <td> <input type="submit" id="submit" value="Register" /></td>
                     </tr>
                 </table>
             </form>
@@ -124,10 +124,6 @@
 
 </html>
 <script>
-    var emaildata = JSON.parse(localStorage.getItem("createaccount"));
-    // console.log(emaildata[0].email);
-    var email = document.getElementById("email");
-    email.value = emaildata[0].email;
     document.getElementById("frm").addEventListener("submit", callfun);
     var data = JSON.parse(localStorage.getItem("register")) || [];
 
@@ -143,7 +139,7 @@
             password: password
         };
         data.push(obj);
-        localStorage.setItem("registert", JSON.stringify(data));
+        localStorage.setItem("register", JSON.stringify(data));
         window.location.href = "shippingpage.html";
         console.log(data);
     }
