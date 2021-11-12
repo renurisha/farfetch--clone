@@ -210,6 +210,7 @@
     <div id="bodycontent">
         <div id="left">
             <p>Add Your DElivery Address</p>
+
             <p>* Required Fields</p>
             <form id="frm">
                 <table>
@@ -310,10 +311,13 @@
     var cartdata = JSON.parse(localStorage.getItem("shippingaddress")) || [];
 
 
+
     var firstname = document.getElementById("name1");
     var lastname = document.getElementById("name2");
     var country = document.getElementById("country");
-    var address = document.getElementById("address");
+    var address1 = document.getElementById("address1");
+    var address2 = document.getElementById("address2");
+    var address3 = document.getElementById("address3");
     var city = document.getElementById("city");
     var state = document.getElementById("state");
     var zipcode = document.getElementById("zipcode");
@@ -372,7 +376,41 @@
 
     function checkallfield() {
         if (firstname.value != "" && lastname.value != "" && country.value != "" && address.value != "" && city.value != "" && state.value != "" && zipcode.value != "" && phone.value != "") {
-            //console.log(" you can proceed");
+            console.log(" you can proceed");
+            //  var firstname = firstname.value;
+            //  var lastname = lastname.value;
+            //  var country = country.value;
+            //  var address = address.value;
+            //  var city = city.value;
+            //  var state = state.value;
+            //  var phone = phone.value;
+            // console.log(firstname, lastname, phone);
+
+            var registerdata = JSON.parse(localStorage.getItem("register"));
+            for (i = 0; i < registerdata.length; i++) {
+                if (registerdata[i].mobile == phone.value) {
+                    var email = registerdata[i].email;
+                    var obj = {
+                        firstname: firstname.value,
+                        lastname: lastname.value,
+                        country: country.value,
+                        address1: address1.value,
+                        address1: address2.value,
+                        address1: address3.value,
+                        city: city.value,
+                        state: state.value,
+                        mobile: phone.value,
+                        email: email
+                    }
+                    console.log(obj);
+                    cartdata.push(obj);
+                    localStorage.setItem("shippingaddress", JSON.stringify(cartdata));
+
+
+
+
+                }
+            }
 
 
         } else {

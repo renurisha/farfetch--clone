@@ -102,8 +102,19 @@
                             <label> Email</label>
                         </td>
                     </tr>
+
                     <tr>
                         <td> <input type="text" id="email" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label> Mobile</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td> <input type="text" id="mobile" required />
                         </td>
                     </tr>
                     <tr>
@@ -132,10 +143,12 @@
         var name = document.getElementById("name").value;
 
         var email = document.getElementById("email").value;
+        var mobile = document.getElementById("mobile").value;
         var password = document.getElementById("password").value;
         var obj = {
             name: name,
             email: email,
+            mobile: mobile,
             password: password
         };
         data.push(obj);
