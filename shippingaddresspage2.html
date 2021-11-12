@@ -238,6 +238,8 @@
             width: 820px;
             height: 100px;
             border: 1px solid gray;
+            display: flex;
+            justify-content: space-around;
         }
         
         #left {
@@ -260,6 +262,14 @@
             margin-top: 20px;
             padding-top: 10px;
         }
+        
+        #addressone,
+        #addresstwo,
+        #addressthree {
+            width: 150;
+            height: 100%;
+            border: 1px solid red;
+        }
     </style>
 </head>
 
@@ -277,7 +287,11 @@
     <div id="bodycontent">
         <div id="left">
             <h2>Select your Address</h2>
-            <div id="addressdetails"></div>
+            <div id="addressdetails">
+                <div id="addressone"></div>
+                <div id="addresstwo"></div>
+                <div id="addressthree"></div>
+            </div>
             <div id="addressdetails1">
                 <div id="editaddress">Add Address</div>
             </div>

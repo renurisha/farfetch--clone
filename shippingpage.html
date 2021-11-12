@@ -310,6 +310,8 @@
 <script>
     var cartdata = JSON.parse(localStorage.getItem("shippingaddress")) || [];
 
+    var data = JSON.parse(localStorage.getItem("checkout"));
+
 
 
     var firstname = document.getElementById("name1");
@@ -336,7 +338,7 @@
     }
     totalprice.textContent = "$" + sum;
     // console.log(sum);
-    showproducts(cartdata);
+    showproducts(data);
 
     function showproducts(product) {
         document.querySelector("#imgdivnew").innerHTML = ""
@@ -405,6 +407,7 @@
                     console.log(obj);
                     cartdata.push(obj);
                     localStorage.setItem("shippingaddress", JSON.stringify(cartdata));
+                    window.location.href = "payment.html";
 
 
 
@@ -414,7 +417,7 @@
 
 
         } else {
-            console.log("empty..........")
+            alert("please fill all fields correctly..");
         }
     }
 </script>

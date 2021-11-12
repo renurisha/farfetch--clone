@@ -124,3 +124,28 @@
 </body>
 
 </html>
+<script>
+    var data = JSON.parse(localStorage.getItem("register"));
+
+    var frm = document.getElementById("frm");
+    frm.addEventListener("submit", signin);
+
+
+    function signin(e) {
+        e.preventDefault();
+        var email1 = document.getElementById("email");
+        var pass1 = document.getElementById("password");
+        var c = 0;
+        for (i = 0; i < data.length; i++) {
+            if (data[i].email == email1.value && data[i].password == pass1.value) {
+                window.location.href = "shippingpage.html";
+            } else {
+                c++;
+
+            }
+        }
+        if (c == data.length) {
+            alert("invalid user");
+        }
+    }
+</script>

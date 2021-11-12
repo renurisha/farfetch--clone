@@ -59,6 +59,7 @@
             color: white;
             justify-content: space-between;
             display: flex;
+            margin-top: 300px;
         }
         
         #footer1 {
@@ -232,6 +233,10 @@
             margin-bottom: 20px;
             padding-top: 20px;
         }
+        
+        #carddetails {
+            margin-top: 40px;
+        }
     </style>
 </head>
 
@@ -257,8 +262,9 @@
                     Debit or Credit card
                 </div>
             </div>
+            <div id="carddetails">CREDIT DETAILS</div>
             <div id="filldata">
-                <h4>CARD DETAILS</h4>
+
                 <form id="frm">
                     <table>
                         <tr>
@@ -279,7 +285,7 @@
 
                         <tr>
                             <label>security code</label><br>
-                            <input type="password" id="password">
+                            <input type="password" id="security">
                         </tr>
 
 
@@ -308,7 +314,7 @@
 
                 </div>
                 <div id="promoinput">
-                    <input type="text" id="promo" placeholder="Enter your promo code">
+                    <input type="text" id="promo" placeholder="Enter your promo code" required>
 
                 </div>
             </div>
@@ -333,6 +339,15 @@
 <script>
     var cartdata = JSON.parse(localStorage.getItem("checkout"));
     var imgdivnew = document.getElementById("imgdivnew");
+    // var showcreditform = document.getElementById("selecttwo");
+    // showcreditform.addEventListener("click", showformfun);
+    var name = document.getElementById("name");
+    var cardnum = document.getElementById("cardnum");
+    var expirydate = document.getElementById("expirydate");
+    var security = document.getElementById("security");
+
+    var savecontinue = document.getElementById("savecontinue");
+    savecontinue.addEventListener("click", checkfields);
     var totalprice = document.getElementById("totalprice");
     var sum = 0;
     for (i = 0; i < cartdata.length; i++) {
@@ -340,6 +355,9 @@
 
     }
     totalprice.textContent = "$" + sum;
+
+
+
     // console.log(sum);
     showproducts(cartdata);
 
@@ -377,5 +395,17 @@
 
 
         });
+    }
+
+
+
+
+    function checkfields() {
+        if (name.value != "" && cardnum.value != "" && expirydate.value != "" && security.value != "") {
+            alert("order placed successfully..");
+
+        } else {
+            alert("please fill all fields correctly");
+        }
     }
 </script>
