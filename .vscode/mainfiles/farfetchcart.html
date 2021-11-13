@@ -378,6 +378,25 @@
         a {
             text-decoration: none;
         }
+        
+        #descpart {
+            width: 100%;
+            height: 500px;
+            border: 1px solid gray;
+            margin-top: 30px;
+        }
+        
+        #descdiv {
+            display: flex;
+            width: 60%;
+            margin: auto;
+        }
+        
+        #descdiv>div {
+            text-align: center;
+            width: 200px;
+            margin-right: 20px;
+        }
     </style>
 </head>
 
@@ -389,8 +408,8 @@
             <div class="threegender">
 
                 <div id="women"><b>women</b></div>
-                <div id="man">men</div>
-                <div>kids</div>
+                <div id="man"><a href="manhome.html">men</a></div>
+                <div><a href="kidshome.html">kids</a></div>
             </div>
             <div class="headingtext">FARFETCH</div>
             <div class="icons">
@@ -873,6 +892,7 @@
 
 
     </div>
+    <div id="descpart"></div>
 
 
     <div id="footer">
@@ -929,6 +949,8 @@
 
     var leftdiv = document.querySelector(".left");
     var rightdiv = document.querySelector(".right");
+    var descpart = document.getElementById("descpart");
+
     var checkoutdata = JSON.parse(localStorage.getItem("checkout")) || [];
     showproducts(cartdata);
 
@@ -978,6 +1000,28 @@
             estimatedtext.textContent = "Estimated Delivery";
             var estimatedtexttwo = document.createElement("p");
             estimatedtexttwo.textContent = "11NOV-28NOV";
+
+            var descdiv = document.createElement("div");
+            descdiv.setAttribute("id", "descdiv");
+            var desc1 = document.createElement("div");
+            var desc2 = document.createElement("div");
+            var desc3 = document.createElement("div");
+            var descpara = document.createElement("p");
+            descpara.textContent = item.description;
+            var descname = document.createElement("p");
+            descname.textContent = item.name;
+            var desccolor = document.createElement("p");
+            desccolor.textContent = item.color;
+            var descsize = document.createElement("p");
+            descsize.textContent = item.size;
+            desc1.append(descpara);
+            desc2.append(descname, desccolor)
+            desc3.append(descsize);
+            descdiv.append(desc1, desc2, desc3);
+            descpart.append(descdiv);
+
+
+
 
 
 

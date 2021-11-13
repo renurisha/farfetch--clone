@@ -853,15 +853,17 @@
 
     <div id="bodycontent">
         <div id="imgfirstdiv">
-            <div class="imgdiv">
-                <img src="https://cdn-static.farfetch-contents.com/cms-cm/in/media/2911518/data/573d464e3a931ec3c72bea37fa0c530a.jpg?ratio=1x1_messaging-side&minWidth=637">
-            </div>
+            <a href="womencloth.html">
+                <div class="imgdiv">
+                    <img src="https://cdn-static.farfetch-contents.com/cms-cm/in/media/2911518/data/573d464e3a931ec3c72bea37fa0c530a.jpg?ratio=1x1_messaging-side&minWidth=637">
+                </div>
+            </a>
             <div class="textdiv">
                 <div class="textdivfirst">ENJOY 22% OFF FOR SINGLES DAY</div>
                 <div class="textdivsecond">
                     For a limited time, you can shop the world’s best selection of designer pieces with 22% off for Singles Day. Offer available on selected full-price items only; discount automatically applied at checkout</div>
                 <div id="shopnowbtn">
-                    <button>SHOP NOW</button>
+                    <button id="shopnow"><a href="womencloth.html">SHOP NOW</a></button>
                 </div>
             </div>
         </div>
@@ -873,7 +875,7 @@
 
         </div>
         <div id="imglowerbtn">
-            <button>SHOP NOW</button>
+            <button><a href="womencloth.html">SHOP NOW</a></button>
         </div>
         <div id="slide div"></div>
         <div id="footer">
@@ -931,6 +933,7 @@
 </html>
 <script>
     var imgseconddiv = document.querySelector("#imgseconddiv");
+
     var local = JSON.parse(localStorage.getItem("farfetchdatabase"));
 
     var arr = [];
