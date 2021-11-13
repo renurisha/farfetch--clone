@@ -276,10 +276,10 @@
                             <div id="cardrow">
                                 <div>
                                     <label>card Number</label><br>
-                                    <input type="text" id="cardnum"></div>
+                                    <input type="Number" id="cardnum"></div>
                                 <div>
                                     <label>Expiry Date</label><br>
-                                    <input type="text" id="expirydate" placeholder="MM/YY"></div>
+                                    <input type="number" id="expirydate" placeholder="MM/YY"></div>
                             </div>
                         </tr>
 
@@ -314,7 +314,7 @@
 
                 </div>
                 <div id="promoinput">
-                    <input type="text" id="promo" placeholder="Enter your promo code" required>
+                    <input type="text" id="promo" placeholder="Enter your promo code">
 
                 </div>
             </div>
@@ -341,7 +341,7 @@
     var imgdivnew = document.getElementById("imgdivnew");
     // var showcreditform = document.getElementById("selecttwo");
     // showcreditform.addEventListener("click", showformfun);
-    var name = document.getElementById("name");
+    var name1 = document.getElementById("name");
     var cardnum = document.getElementById("cardnum");
     var expirydate = document.getElementById("expirydate");
     var security = document.getElementById("security");
@@ -397,13 +397,41 @@
         });
     }
 
-
+    var promocode = "masai30";
 
 
     function checkfields() {
-        if (name.value != "" && cardnum.value != "" && expirydate.value != "" && security.value != "") {
-            alert("order placed successfully..");
-            window.location.href = "womenhome.html";
+        if (name1.value != "" && cardnum.value != "" && expirydate.value != "" && security.value != "") {
+            var promo = document.getElementById("promo");
+            if (promo.value == promocode) {
+
+
+                sum1 = sum - (sum * (20 / 100));
+                var totalprice = document.getElementById("totalprice");
+                totalprice.textContent = "$" + sum + " Reduced to:" + "$" + sum1;
+                console.log(totalprice.textContent);
+                promo.setAttribute("disabled", "true");
+                alert("order placed successfully..");
+                window.location.href = "womenhome.html";
+                name1.value = "";
+                cardnum.value = "";
+                expirydate.value = "";
+                security.value = "";
+
+            } else {
+                var promotext = document.getElementById("promotext");
+                promotext.style.color = "red";
+                promotext.textContent = "Can't Apply Promo";
+                promo.setAttribute("disabled", "true");
+                alert("order placed successfully..");
+                window.location.href = "womenhome.html";
+                name1.value = "";
+                cardnum.value = "";
+                expirydate.value = "";
+                security.value = "";
+
+            }
+
 
         } else {
             alert("please fill all fields correctly");
