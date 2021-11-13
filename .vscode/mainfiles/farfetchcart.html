@@ -394,8 +394,9 @@
         
         #descdiv>div {
             text-align: center;
-            width: 200px;
-            margin-right: 20px;
+            width: 300px;
+            margin-right: 100px;
+            text-align: justify;
         }
     </style>
 </head>
@@ -1007,13 +1008,13 @@
             var desc2 = document.createElement("div");
             var desc3 = document.createElement("div");
             var descpara = document.createElement("p");
-            descpara.textContent = item.description;
+            descpara.textContent = "Description:-" + item.description;
             var descname = document.createElement("p");
-            descname.textContent = item.name;
+            descname.textContent = "Name:" + "-" + item.name;
             var desccolor = document.createElement("p");
-            desccolor.textContent = item.color;
+            desccolor.textContent = "color:" + "-" + item.color;
             var descsize = document.createElement("p");
-            descsize.textContent = item.size;
+            descsize.textContent = "size:" + "-" + item.size;
             desc1.append(descpara);
             desc2.append(descname, desccolor)
             desc3.append(descsize);
