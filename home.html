@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/f3afea15cd.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0px;
+        }
+        
+        .main {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .nav {
+            width: 100%;
+            height: 50px;
+            background-color: gray;
+        }
+        
+        .header {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .header>div {
+            width: 300px;
+            text-align: center;
+            padding: 20px 0px;
+        }
+        
+        #first>ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+        
+        #second {
+            text-align: center;
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #third>ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        ul ul li {
+            width: 100%;
+            list-style: none;
+            line-height: 100px;
+            justify-content: space-around;
+        }
+        
+        ul>ul {
+            display: flex;
+        }
+        
+        ul>ul>li {
+            max-width: 100px;
+        }
+        
+        ul>li>ul {
+            display: none;
+        }
+        
+        ul>li:hover ul {
+            display: flex;
+            position: absolute;
+            display: flex;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        ul>li:hover ul>li {
+            float: none;
+            min-width: 120px;
+        }
+        
+        ul>li>ul>li>ul {
+            display: none;
+        }
+        
+        #womenshoes,
+        #womencloth,
+        #womenbags {
+            display: none;
+        }
+        
+        #two>li:hover ul {
+            display: block;
+            position: absolute;
+            background-color: #acacac;
+            line-height: 0px;
+        }
+        
+        #two>li:hover ul>li {
+            width: 100px;
+            line-height: 30px;
+            margin-top: 0px;
+            padding-top: 0px;
+        }
+        
+        ul #three>li>ul {
+            display: none;
+        }
+        
+        ul #four>li>ul {
+            display: none;
+        }
+        
+        ul #three>li:hover ul {
+            display: block;
+            line-height: 15px;
+            width: 500px;
+            background-color: gray;
+        }
+        
+        ul #three>li:hover ul li {
+            line-height: 25px;
+        }
+        
+        ul #four>li:hover ul {
+            display: block;
+            line-height: 15px;
+            width: 500px;
+            background-color: gray;
+        }
+        
+        ul #four>li:hover ul li {
+            line-height: 25px;
+        }
+        
+        #content {
+            width: 100%;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav"></div>
+        <div class="header">
+            <div id="first">
+                <ul id="one">
+                    <li>women
+                        <ul id="two">
+                            <li>Designers</li>
+                            <li>Clothing
+                                <ul id="womencloth">
+
+                                    <li>
+                                        <h3>clothing</h3>
+                                    </li>
+                                    <li><a href="womanjacket.html">jacket</a></li>
+                                    <li>skirt</li>
+                                    <li>suit</li>
+
+                                    <li>saree</li>
+                                    <li>top</li>
+                                    <li>lahenga</li>
+
+
+
+                                    <li>
+                                        <h3>Designer</h3>
+                                    </li>
+
+                                    <li>Balmain</li>
+                                    <li>Gucci</li>
+
+                                </ul>
+
+                            </li>
+                            <li>shoes
+                                <ul id="womenshoes">
+
+                                    <li>
+                                        <h3>shoes</h3>
+                                    </li>
+
+                                    <li>Boots</li>
+                                    <li>slides & flip flop</li>
+                                    <li>pumps</li>
+                                    <li>sandles</li>
+
+
+
+                                    <li>
+                                        <h3>Designer</h3>
+                                    </li>
+
+                                    <li>Balmain</li>
+                                    <li>Gucci</li>
+
+                                </ul>
+
+
+                            </li>
+                            <li>Bags
+                                <ul id="womenbags">
+
+                                    <li>
+                                        <h3>Bags</h3>
+                                    </li>
+
+                                    <li>backpacks</li>
+                                    <li>Belt bags</li>
+                                    <li>cluth bag</li>
+                                    <li>Luggage</li>
+
+
+
+                                    <li>
+                                        <h3>Designer</h3>
+                                    </li>
+
+                                    <li>Balmain</li>
+                                    <li>Gucci</li>
+
+                                </ul>
+
+
+                            </li>
+                            <li>Jewelary</li>
+                        </ul>
+                    </li>
+                    <li>Man
+
+                        <ul id="three">
+                            <li>Designers</li>
+                            <li>Clothing
+                                <ul id="manthree">
+
+                                    <li>
+                                        <h3>clothing</h3>
+                                    </li>
+
+                                    <li>coat</li>
+                                    <li>Jeans</li>
+                                    <li>shirt</li>
+                                    <li>suit</li>
+                                    <li>t-shirt</li>
+
+
+
+
+                                    <li>
+                                        <h3>Designer</h3>
+                                    </li>
+
+                                    <li>Balmain</li>
+                                    <li>Gucci</li>
+
+                                </ul>
+
+                            </li>
+                            <li>shoes
+                                <ul id="manshoes">
+
+                                    <li>
+                                        <h3>shoes</h3>
+                                    </li>
+
+                                    <li>Boots</li>
+                                    <li>slides & flip flop</li>
+                                    <li>pumps</li>
+                                    <li>sandles</li>
+
+
+
+                                    <li>
+                                        <h3>Designer</h3>
+                                    </li>
+
+                                    <li>Balmain</li>
+                                    <li>Gucci</li>
+
+                                </ul>
+
+
+                            </li>
+                            <li>Bags
+                                <ul id="manbags">
+
+                                    <li>
+                                        <h3>Bags</h3>
+                                    </li>
+
+                                    <li>backpacks</li>
+                                    <li>Belt bags</li>
+                                    <li>cluth bag</li>
+                                    <li>Luggage</li>
+
+
+
+                                    <li>
+                                        <h3>Designer</h3>
+                                    </li>
+
+                                    <li>Balmain</li>
+                                    <li>Gucci</li>
+
+                                </ul>
+
+                            </li>
+                            <li>watch
+                                <ul id="manwatch">
+                                    <li>
+                                        <h3>Watch</h3>
+                                    </li>
+                                    <li>Fashion watch</li>
+                                    <li>Diving Watch</li>
+                                    <li>Dress watch</li>
+                                    <li>
+                                        <h3>Designers</h3>
+                                    </li>
+                                    <li>omega</li>
+                                    <li>Rolex</li>
+                                    <li>Zenith</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>kids
+
+                        <ul id="four">
+                            <li>Designers</li>
+                            <li>Clothing
+                                <ul>
+                                    <li>
+                                        <h3>cloth</h3>
+                                    </li>
+                                    <li>Most wanted</li>
+                                    <li>Denim</li>
+                                    <li>PartyWear</li>
+                                    <li>Sportswear</li>
+                                </ul>
+                            </li>
+                            <li>shoes</li>
+                            <li>Bags</li>
+
+                            <li>Toys</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="second"><b>FARFETCH</b></div>
+            <div id="third">
+                <ul>
+                    <li><i class="fas fa-adjust"></i></li>
+                    <li><i class="far fa-user"></i></li>
+                    <li><i class="far fa-star"></i></li>
+                    <li><i class="fas fa-shopping-bag"></i></li>
+                </ul>
+            </div>
+
+        </div>
+        <div id="content"></div>
+    </div>
+</body>
+
+</html>

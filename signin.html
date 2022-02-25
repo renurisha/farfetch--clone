@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            text-align: center;
+            width: 500px;
+            padding: 20px;
+            margin: auto;
+        }
+        
+        .second {
+            border-bottom: 1px solid black;
+            width: 310px;
+            height: 40px;
+            text-align: center;
+            margin: auto;
+            margin-top: 15px;
+            box-sizing: border-box;
+            display: flex;
+            padding-left: 15px;
+            box-sizing: border-box;
+        }
+        
+        .second>div:nth-child(1) {
+            margin-right: 35px;
+            text-align: center;
+        }
+        
+        .third {
+            width: 370px;
+            margin: auto;
+            text-align: left;
+        }
+        
+        #signin {
+            text-align: center;
+            justify-content: center;
+            padding-top: 15px;
+            box-sizing: border-box;
+            border-bottom: 2px solid black;
+            width: 60px;
+            height: 100%;
+        }
+        
+        #here {
+            text-align: center;
+            justify-content: center;
+            padding-top: 15px;
+            box-sizing: border-box;
+            width: 40%;
+            height: 100%;
+            text-decoration: none;
+        }
+        
+        input {
+            height: 40px;
+            width: 330px;
+        }
+        
+        #submit {
+            margin-top: 30px;
+            width: 330px;
+            height: 50px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            border-radius: 7px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+            margin-left: 10px;
+        }
+        
+        label {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="first">
+            <h2>you are almost here</h2>
+        </div>
+        <div class="second">
+            <div id="signin">SIGN IN</div>
+            <div id="here"><a href="signupfarfetch.html">I AM HERE</a></div>
+
+        </div>
+        <div class="third">
+            <form id="frm">
+                <table>
+                    <tr>
+                        <td><label>Email</label></td>
+                    </tr>
+                    <tr>
+                        <td> <input type="text" id="email" />
+                            <td></td>
+                            <tr>
+                                <td> <label>Password</label></td>
+                            </tr>
+                            <tr>
+                                <td> <input type="password" id="password" /></td>
+                            </tr>
+                            <tr>
+                                <td> <input type="submit" id="submit" value="SIGN IN" /></td>
+                            </tr>
+                </table>
+            </form>
+            <p style="margin-top: 20px; font-family: Arial, Helvetica, sans-serif; font-size: 16px;  text-decoration: underline; margin-left: 20px;"><a href="register.html">New To FARFETCH? Register Here</a></p>
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var data = JSON.parse(localStorage.getItem("register"));
+
+    var frm = document.getElementById("frm");
+    frm.addEventListener("submit", signin);
+
+
+    function signin(e) {
+        e.preventDefault();
+        var email1 = document.getElementById("email");
+        var pass1 = document.getElementById("password");
+        var c = 0;
+        for (i = 0; i < data.length; i++) {
+            if (data[i].email == email1.value && data[i].password == pass1.value) {
+                window.location.href = "shippingpage.html";
+            } else {
+                c++;
+
+            }
+        }
+        if (c == data.length) {
+            alert("invalid user");
+        }
+    }
+</script>
